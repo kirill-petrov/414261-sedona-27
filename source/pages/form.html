@@ -53,8 +53,187 @@
       </nav>
     </header>
 
-    <main>
-      <!-- Основное содержимое страницы -->
+    <main class="page__main main-content">
+      <h1 class="visually-hidden">Форма для отзыва</h1>
+
+      <!-- //todo: picture -->
+      <div class="main-hero main-hero__wrapper">
+        <img src="#" alt="Вид на горы" />
+      </div>
+
+      <div class="leave-review">
+        <h2 class="leave-review__title">Оставьте свой отзыв</h2>
+        <p class="leave-review__description">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          посещенных вами достопримечательностях
+        </p>
+      </div>
+
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__legend">Представьтесь</legend>
+
+          <label class="fieldset__field fieldset__field--required">
+            <span class="fieldset__label">Имя<sup>*</sup>:</span>
+            <input
+              class="fieldset__input input"
+              type="text"
+              name="guest-name"
+              placeholder="Введите имя"
+            />
+          </label>
+
+          <label class="fieldset__field fieldset__field--required">
+            <span class="fieldset__label">Фамилия<sup>*</sup>:</span>
+            <input
+              class="fieldset__input input"
+              type="text"
+              name="guest-surname"
+              placeholder="Введите имя"
+            />
+          </label>
+
+          <label class="fieldset__field">
+            <span class="fieldset__label">Отчество:</span>
+            <input
+              class="fieldset__input input"
+              type="text"
+              name="guest-patronymic"
+              placeholder="Введите имя"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__legend">Контактная информация:</legend>
+
+          <label class="fieldset__field fieldset__field--required">
+            <span class="fieldset__label">Контактный телефон<sup>*</sup>:</span>
+            <input
+              class="fieldset__input input"
+              type="tel"
+              name="guest-phone"
+              placeholder="Введите телефон"
+            />
+          </label>
+
+          <label class="fieldset__field fieldset__field--required">
+            <span class="fieldset__label">Электронная почта<sup>*</sup>:</span>
+            <input
+              class="fieldset__input input"
+              type="email"
+              name="guest-email"
+              placeholder="Введите e-mail"
+            />
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__legend">Ваше общее впечатление:</legend>
+
+          <label class="fieldset__radio-button radio-button">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="point"
+              value="good"
+              checked
+            />
+            <span class="radio-button__label">Скорее положительные</span>
+          </label>
+
+          <label class="fieldset__radio-button radio-button">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="point"
+              value="bad"
+            />
+            <span class="radio-button__label">Скорее отрицательные</span>
+          </label>
+
+          <label class="fieldset__radio-button radio-button">
+            <input
+              class="visually-hidden"
+              type="radio"
+              name="point"
+              value="none"
+              checked
+            />
+            <span class="radio-button__label">Затрудняюсь ответить</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__legend">
+            Посещенные достопримечательности:
+          </legend>
+
+          <label class="fieldset__radio-button checkbox">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="bridge"
+              checked
+            />
+            <span class="checkbox__label">Мост Дьявола</span>
+          </label>
+
+          <label class="fieldset__radio-button checkbox">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="bell"
+              checked
+            />
+            <span class="checkbox__label">Гора-Колокол</span>
+          </label>
+
+          <label class="fieldset__radio-button checkbox">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="slide-park"
+              checked
+            />
+            <span class="checkbox__label">Слайд-парк</span>
+          </label>
+
+          <label class="fieldset__radio-button checkbox">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="red-rocks"
+              checked
+            />
+            <span class="checkbox__label">Красные скалы</span>
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset fieldset">
+          <legend class="fieldset__legend">Опишите свои эмоции:</legend>
+
+          <label class="fieldset__field">
+            <textarea
+              class="fieldset__input"
+              name="comment"
+              rows="3"
+              placeholder="Опишите подробно все свои восторги"
+            ></textarea>
+          </label>
+        </fieldset>
+
+        <div class="form__submit-group submit-group">
+          <button
+            class="submit-group__button button button--primary"
+            type="submit"
+            aria-label="Отправить отзыв"
+          >
+            Отправить отзыв
+          </button>
+          <p class="submit-group__label">* – обязательные поля</p>
+        </div>
+      </form>
     </main>
 
     <footer class="page__footer footer">
@@ -91,5 +270,35 @@
         </a>
       </div>
     </footer>
+
+    <div class="modal-container">
+      <div class="modal modal--error modal-hidden">
+        <h2 class="modal__title">Что-то пошлоне так!</h2>
+        <p class="modal__message">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </p>
+        <button
+          class="modal__close-button button button--primary"
+          type="button"
+        >
+          OK
+        </button>
+      </div>
+
+      <div class="modal modal--success modal-hidden">
+        <h2 class="modal__title">Ваш отзыв отправлен!</h2>
+        <p class="modal__message">
+          Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
+          время мы опубликуем его на сайте.
+        </p>
+        <button
+          class="modal__close-button button button--primary"
+          type="button"
+        >
+          Закрыть окно
+        </button>
+      </div>
+    </div>
   </body>
 </html>
