@@ -9,6 +9,7 @@
           "inside-parens"
         ]
       }
-    ]
+    ],
+    "at-rule-no-unknown": null
   }
 }
