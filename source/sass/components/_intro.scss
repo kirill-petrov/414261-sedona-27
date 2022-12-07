@@ -1,0 +1,23 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 18px 16px 18px;
+  text-align: center;
+  text-transform: uppercase;
+
+  // todo before & after: СВГ-элементы
+}
+
+.intro__title {
+  margin: 0 0 35px;
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+}
+
+.intro__message {
+  margin: 0;
+}

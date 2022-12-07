@@ -1,0 +1,29 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+*,
+*::before,
+*::after {
+  margin: 0; //? Какие мб негативные последствия?
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var.$main-font;
+  @include mix.title-400-14-21;
+  color: var.$color-text-basic;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.visually-hidden {
+  @include mix.visually-hidden;
+}

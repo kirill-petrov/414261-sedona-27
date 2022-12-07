@@ -1,4 +1,13 @@
-// Начните писать стили здесь
-body {
-  background: red;
-}
+/* Global */
+@use "./base";
+
+/* Components */
+@use "./components/site-nav";
+@use "./components/intro";
+@use "./components/travel-details";
+@use "./components/feature";
+@use "./components/services";
+@use "./components/call-to-action";
+@use "./components/footer";
+@use "./components/social";
+@use "./components/copyright";

@@ -1,0 +1,58 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.feature {
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var.$color-bg-lightgrey;
+
+  &--extended {
+    background-color: var.$color-bg-primary;
+    color: var.$color-text-white;
+  }
+}
+
+.feature__typography-wrapper {
+  padding: 0 18px;
+}
+
+.feature__title {
+  margin-bottom: 11px;
+  padding-top: 30px;
+  @include mix.title-700-18-26;
+
+  &--city {
+    padding-top: 70px;
+  }
+
+  &--bridge {
+    padding-top: 40px;
+  }
+}
+
+.feature__number {
+  margin-bottom: 17px;
+
+}
+
+.feature__description {
+  margin: 0;
+  padding-bottom: 30px;
+
+  &--city {
+    padding-bottom: 40px
+  }
+
+  &--bridge {
+    padding-bottom: 43px
+  }
+
+  &--b-border {
+    border-bottom: 1px solid var.$b-border;
+  }
+}
+
+.feature__image {
+  outline: 5px solid rgb(17, 0, 255);
+  outline-offset: -3px;
+}
