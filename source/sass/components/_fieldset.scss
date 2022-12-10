@@ -17,6 +17,7 @@
 .fieldset__title {
   text-align: center;
   margin-bottom: 20px;
+
   @include mix.title-700-18-26;
   color: var.$color-text-black;
 }
@@ -26,6 +27,7 @@
 .fieldset__field {
   display: flex;
   flex-direction: column;
+
   &:not(:last-child) {
     margin-bottom: 16px;
   }
@@ -46,7 +48,6 @@
   &::placeholder {
     color: var.$color-text-placholder;
   }
-
 }
 
 .fieldset__textarea {

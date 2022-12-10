@@ -25,18 +25,21 @@
   font-size: 14px;
   line-height: 21px;
 }
+
 @mixin title-700-14-21 {
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
   line-height: 21px;
 }
+
 @mixin title-700-18-26 {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
+
 @mixin title-700-21-26 {
   font-style: normal;
   font-weight: 700;
@@ -60,6 +63,7 @@
   &:hover {
     background-color: var.$color-bg-primary-hover;
   }
+
   &:active {
     color: #87b6d1;
     background-color: var.$color-bg-primary-active;

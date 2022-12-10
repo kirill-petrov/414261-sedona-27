@@ -19,6 +19,7 @@
 .feature__title {
   margin-bottom: 11px;
   padding-top: 30px;
+
   @include mix.title-700-18-26;
 
   &--city {
@@ -32,7 +33,6 @@
 
 .feature__number {
   margin-bottom: 17px;
-
 }
 
 .feature__description {
@@ -40,11 +40,11 @@
   padding-bottom: 30px;
 
   &--city {
-    padding-bottom: 40px
+    padding-bottom: 40px;
   }
 
   &--bridge {
-    padding-bottom: 43px
+    padding-bottom: 43px;
   }
 
   &--b-border {

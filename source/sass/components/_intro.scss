@@ -15,6 +15,7 @@
 
 .intro__title {
   margin: 0 0 35px;
+
   @include mix.title-700-18-26;
   color: var.$color-text-black;
 }

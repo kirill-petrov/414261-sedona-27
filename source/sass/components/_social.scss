@@ -75,11 +75,11 @@
   // display: block;
   width: 22px;
   height: 18px;
-  fill: green;
-  color: tomato;
+  // fill: green;
+  // color: tomato;
 
   &:hover {
-    fill: blue;
+    // fill: blue;
   }
 }
 
@@ -87,10 +87,10 @@
 .test-svg {
   width: 20px;
   height: 14px;
-  background-color: aquamarine;
+  // background-color: aquamarine;
   mask-image: url("../img/yt.svg");
 
   &:hover {
-    background-color: red;
+    // background-color: red;
   }
 }

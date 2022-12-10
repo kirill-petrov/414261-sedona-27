@@ -39,11 +39,13 @@
 
 .photos__title {
   margin-bottom: 2px;
+
   @include mix.title-700-14-21;
   text-transform: uppercase;
 }
 
 .photos__author {
   margin-bottom: 11px;
+
   @include mix.title-400-14-21;
 }

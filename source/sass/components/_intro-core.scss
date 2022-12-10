@@ -9,6 +9,7 @@
 
 .intro-core__title {
   margin-bottom: 24px;
+
   @include mix.title-700-18-26;
   color: var.$color-text-black;
 }

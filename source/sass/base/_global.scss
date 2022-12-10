@@ -11,8 +11,9 @@
 body {
   min-height: 100vh;
   font-family: var.$main-font;
-  @include mix.title-400-14-21;
   color: var.$color-text-basic;
+
+  @include mix.title-400-14-21;
 }
 
 a {

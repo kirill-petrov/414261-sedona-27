@@ -4,6 +4,7 @@
 .checkbox {
   display: flex;
   align-items: center;
+
   @include mix.title-700-18-26;
   color: var.$color-text-black;
   text-transform: none;
