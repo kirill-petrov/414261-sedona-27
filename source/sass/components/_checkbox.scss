@@ -1,0 +1,44 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+  text-transform: none;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.checkbox__custom-check {
+  position: relative;
+  background-color: var.$color-bg-input;
+  width: 46px;
+  height: 46px;
+  border-radius: 4px;
+  margin-right: 16px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 22px;
+    height: 16px;
+    background-image: url("../../img/tick.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.checkbox__input {
+  appearance: none;
+
+  &:checked + .checkbox__custom-check::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

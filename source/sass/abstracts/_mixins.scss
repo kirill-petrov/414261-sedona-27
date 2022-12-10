@@ -25,14 +25,18 @@
   font-size: 14px;
   line-height: 21px;
 }
-
+@mixin title-700-14-21 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+}
 @mixin title-700-18-26 {
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
 }
-
 @mixin title-700-21-26 {
   font-style: normal;
   font-weight: 700;
@@ -40,20 +44,22 @@
   line-height: 26px;
 }
 
-// проблема - ховер эффекты аналогичные применяются в меню  site-nav
 @mixin button {
   width: 100%;
   height: 58px;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   color: var.$color-text-white;
   background-color: var.$color-bg-primary;
+
+  border: none;
+  outline: none;
 
   &:hover {
     background-color: var.$color-bg-primary-hover;
   }
-
   &:active {
     color: #87b6d1;
     background-color: var.$color-bg-primary-active;

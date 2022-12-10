@@ -1,6 +1,7 @@
 @use "../abstracts/vars" as var;
 @use "../abstracts/mixins" as mix;
 
+// Интро для главной
 .intro {
   display: flex;
   flex-direction: column;

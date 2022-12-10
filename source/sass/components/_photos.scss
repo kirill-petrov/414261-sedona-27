@@ -1,0 +1,49 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.photos {
+  @include mix.list-reset;
+}
+
+.photos__item {
+  position: relative;
+  padding: 24px 0 25px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    height: 1px;
+    width: 100vw;
+    background-color: var.$post-border;
+  }
+
+  &:last-child {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: -20px;
+      height: 1px;
+      width: 100vw;
+      background-color: var.$post-border;
+    }
+  }
+}
+
+.photos__image {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.photos__title {
+  margin-bottom: 2px;
+  @include mix.title-700-14-21;
+  text-transform: uppercase;
+}
+
+.photos__author {
+  margin-bottom: 11px;
+  @include mix.title-400-14-21;
+}

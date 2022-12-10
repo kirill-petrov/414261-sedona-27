@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as mix;
+
+.like {
+  display: flex;
+  align-items: center;
+  height: 21px;
+}
+
+.like__button {
+  margin: 0;
+  margin-right: 14px;
+  padding: 0;
+  border: none;
+  background: none;
+  // overflow: visible; //? уточнить суть свойства
+  cursor: pointer;
+}
+
+.like__total-likes {
+  @include mix.title-700-14-21;
+  padding-top: 6px;
+}

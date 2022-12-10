@@ -1,16 +1,16 @@
-@use "../abstracts/mixins" as mix;
+// @use "../abstracts/mixins" as mix;
 @use "../abstracts/vars" as var;
 
 .social {
   display: flex;
   gap: 6px;
-  @include mix.list-reset;
+  padding: 0;
+  list-style-type: none;
 }
 
 .social__link {
   position: relative;
   display: block;
-  margin-bottom: 40px;
   width: 48px;
   height: 48px;
   background-color: var.$color-bg-primary;
@@ -28,7 +28,7 @@
   &::before {
     position: absolute;
     content: "";
-    margin: auto;
+    // margin: auto;
     top: 0;
     bottom: 0;
     left: 0;
@@ -57,7 +57,7 @@
 .social__link--tg {
   position: relative;
   display: block;
-  margin-bottom: 40px;
+
   width: 48px;
   height: 48px;
   background-color: var.$color-bg-primary;

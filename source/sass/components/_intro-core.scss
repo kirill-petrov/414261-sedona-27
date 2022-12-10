@@ -1,0 +1,14 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.intro-core {
+  padding: 36px 0 28px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.intro-core__title {
+  margin-bottom: 24px;
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+}

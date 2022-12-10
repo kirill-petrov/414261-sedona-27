@@ -1,0 +1,44 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.radio {
+  display: flex;
+  align-items: center;
+
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+  text-transform: none;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.radio__custom-check {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: var.$color-bg-input;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: var.$color-text-basic;
+  }
+}
+
+.radio__input {
+  appearance: none;
+
+  &:checked + .radio__custom-check::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
