@@ -10,10 +10,15 @@
 
 <body class="page__body">
   <header class="page__header page-header">
+    <a class="page-header__logo logo" href="index.html">
+      <picture>
+        <!-- <source media="(min-width: 1200px)" /> -->
+        <!-- <source media="(min-width: 768px)" /> -->
+        <img class="logo__image" src="./img/logo-temp.png" width="185" height="96" alt="Лого седоны" />
+      </picture>
+    </a>
+
     <nav class="page-header__nav main-nav">
-      <a class="main-nav__logo logo" href="../index.html">
-        <img class="logo__image" src="./img/logo-temp.png" alt="Лого седоны" width="185" height="96" />
-      </a>
       <!-- todo CONTEINER ???  -->
       <ul class="main-nav__links site-nav">
         <li class="site-nav__item">
@@ -23,7 +28,7 @@
           <a class="site-nav__link" href="catalog.html">Фото и видео</a>
         </li>
         <li class="site-nav__item site-nav__item--active">
-          <a class="site-nav__link" href="#">Форма отзыва</a>
+          <a class="site-nav__link">Форма отзыва</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -38,121 +43,113 @@
   </header>
 
   <main class="page__main">
-    <picture class="hero">
-      <img class="hero__title" src="./img/hero-SEDONA.svg" alt="Заголовок — Седона" />
-    </picture>
-
-    <div class="container-page-form">
-      <section class="feedback">
-        <h1 class="visually-hidden">Форма для отзыва</h1>
-
-        <section class="feedback__intro intro-core">
-          <h2 class="intro-core__title">Оставьте свой отзыв</h2>
-          <p class="intro-core__message">
-            Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
-            посещенных вами достопримечательностях
-          </p>
-        </section>
-
-        <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__fieldset fieldset">
-            <h2 class="fieldset__title">Представьтесь</h2>
-
-            <label class="fieldset__field">
-              <span class="fieldset__label">Имя<sup>*</sup>:</span>
-              <input class="fieldset__input" type="text" name="guest-name" placeholder="Введите имя" value="Имя" required />
-            </label>
-
-            <label class="fieldset__field">
-              <span class="fieldset__label">Фамилия<sup>*</sup>:</span>
-              <input class="fieldset__input" type="text" name="guest-surname" placeholder="Введите фамилию" required />
-            </label>
-
-            <label class="fieldset__field">
-              <span class="fieldset__label">Отчество:</span>
-              <input class="fieldset__input" type="text" name="guest-patronymic" placeholder="Введите отчество" />
-            </label>
-          </fieldset>
-
-          <fieldset class="form__fieldset fieldset">
-            <h2 class="fieldset__title">Контактная информация:</h2>
-            <label class="fieldset__field">
-              <span class="fieldset__label">
-                Контактный телефон<sup>*</sup>:
-              </span>
-              <input class="fieldset__input" type="tel" name="guest-phone" placeholder="Введите телефон" required />
-            </label>
-            <label class="fieldset__field">
-              <span class="fieldset__label">
-                Электронная почта<sup>*</sup>:
-              </span>
-              <input class="fieldset__input" type="email" name="guest-email" placeholder="Введите e-mail" required />
-            </label>
-          </fieldset>
-          <!-- RADIO -->
-          <fieldset class="form__fieldset fieldset">
-            <h2 class="fieldset__title">Ваше общее впечатление:</h2>
-
-            <label class="fieldset__field-radio radio">
-              <input class="radio__input" type="radio" name="point" value="good" checked />
-              <div class="radio__custom-check"></div>
-              <span>Скорее положительные</span>
-            </label>
-
-            <label class="fieldset__field-radio radio">
-              <input class="radio__input" type="radio" name="point" value="bad" />
-              <div class="radio__custom-check"></div>
-              <span>Скорее отрицательные</span>
-            </label>
-
-            <label class="fieldset__field-radio radio">
-              <input class="radio__input" type="radio" name="point" value="none" />
-              <div class="radio__custom-check"></div>
-              <span>Затрудняюсь ответить</span>
-            </label>
-          </fieldset>
-          <!-- CHECKBOX -->
-          <fieldset class="form__fieldset fieldset">
-            <h2 class="fieldset__title">Посещенные достопримечательности:</h2>
-
-            <label class="fieldset__field-checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" name="bridge" />
-              <div class="checkbox__custom-check"></div>
-              <span>Мост Дьявола</span>
-            </label>
-            <label class="fieldset__field-checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" name="bell" />
-              <div class="checkbox__custom-check"></div>
-              <span>Гора-Колокол</span>
-            </label>
-            <label class="fieldset__field-checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" name="slide-park" />
-              <div class="checkbox__custom-check"></div>
-              <span>Слайд-парк</span>
-            </label>
-            <label class="fieldset__field-checkbox checkbox">
-              <input class="checkbox__input" type="checkbox" name="red-rocks" />
-              <div class="checkbox__custom-check"></div>
-              <span>Красные скалы</span>
-            </label>
-          </fieldset>
-          <!-- TEXTAREA -->
-          <fieldset class="form__fieldset fieldset">
-            <h2 class="fieldset__title">Опишите свои эмоции:</h2>
-            <label class="fieldset__field">
-              <textarea class="fieldset__input fieldset__textarea" name="comment" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
-            </label>
-          </fieldset>
-
-          <div class="form__submit-group submit-group">
-            <button class="submit-group__button" type="submit" aria-label="Отправить отзыв">
-              Отправить отзыв
-            </button>
-            <p class="submit-group__help-text">* — обязательные поля</p>
-          </div>
-        </form>
-      </section>
+    <div class="hero">
+      <img class="hero__title" src="./img/hero-sedona.svg" alt="Заголовок — Седона" />
     </div>
+
+    <section class="feedback container">
+      <h1 class="visually-hidden">Форма для отзыва</h1>
+
+      <section class="feedback__intro intro-core">
+        <h2 class="intro-core__title">Оставьте свой отзыв</h2>
+        <p class="intro-core__message">
+          Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о
+          посещенных вами достопримечательностях
+        </p>
+      </section>
+
+      <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset class="form__fieldset fieldset">
+          <h2 class="fieldset__title">Представьтесь</h2>
+
+          <label class="fieldset__field">
+            <span class="fieldset__label">Имя<sup>*</sup>:</span>
+            <input class="fieldset__input" type="text" name="guest-name" placeholder="Введите имя" value="Имя" required />
+          </label>
+
+          <label class="fieldset__field">
+            <span class="fieldset__label">Фамилия<sup>*</sup>:</span>
+            <input class="fieldset__input" type="text" name="guest-surname" placeholder="Введите фамилию" required />
+          </label>
+
+          <label class="fieldset__field">
+            <span class="fieldset__label">Отчество:</span>
+            <input class="fieldset__input" type="text" name="guest-patronymic" placeholder="Введите отчество" />
+          </label>
+        </fieldset>
+
+        <fieldset class="form__fieldset fieldset">
+          <h2 class="fieldset__title">Контактная информация:</h2>
+          <label class="fieldset__field">
+            <span class="fieldset__label">
+              Контактный телефон<sup>*</sup>:
+            </span>
+            <input class="fieldset__input" type="tel" name="guest-phone" placeholder="Введите телефон" required />
+          </label>
+          <label class="fieldset__field">
+            <span class="fieldset__label">
+              Электронная почта<sup>*</sup>:
+            </span>
+            <input class="fieldset__input" type="email" name="guest-email" placeholder="Введите e-mail" required />
+          </label>
+        </fieldset>
+        <!-- RADIO -->
+        <fieldset class="form__fieldset fieldset">
+          <h2 class="fieldset__title">Ваше общее впечатление:</h2>
+
+          <label class="fieldset__field-radio radio">
+            <input class="radio__input" type="radio" name="point" value="good" checked />
+            <span>Скорее положительные</span>
+          </label>
+
+          <label class="fieldset__field-radio radio">
+            <input class="radio__input" type="radio" name="point" value="bad" />
+            <span>Скорее отрицательные</span>
+          </label>
+
+          <label class="fieldset__field-radio radio">
+            <input class="radio__input" type="radio" name="point" value="none" />
+            <span>Затрудняюсь ответить</span>
+          </label>
+        </fieldset>
+        <!-- CHECKBOX -->
+        <fieldset class="form__fieldset fieldset">
+          <h2 class="fieldset__title">Посещенные достопримечательности:</h2>
+
+          <label class="fieldset__field-checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" name="bridge" />
+            <span>Мост Дьявола</span>
+          </label>
+          <label class="fieldset__field-checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" name="bell" />
+            <span>Гора-Колокол</span>
+          </label>
+          <label class="fieldset__field-checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" name="slide-park" />
+            <span>Слайд-парк</span>
+          </label>
+          <label class="fieldset__field-checkbox checkbox">
+            <input class="checkbox__input" type="checkbox" name="red-rocks" />
+            <span>Красные скалы</span>
+          </label>
+        </fieldset>
+        <!-- TEXTAREA -->
+        <fieldset class="form__fieldset fieldset">
+          <h2 class="fieldset__title">Опишите свои эмоции:</h2>
+          <label class="fieldset__field">
+            <textarea class="fieldset__input fieldset__textarea" name="comment" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
+          </label>
+        </fieldset>
+
+        <div class="form__submit-group submit-group">
+          <button class="submit-group__button" type="submit" aria-label="Отправить отзыв">
+            Отправить отзыв
+          </button>
+          <p class="submit-group__help-text">* — обязательные поля</p>
+        </div>
+      </form>
+    </section>
+
   </main>
 
   <footer class="page__footer footer">

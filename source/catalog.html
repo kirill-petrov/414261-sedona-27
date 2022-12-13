@@ -11,17 +11,22 @@
 <body class="page__body">
 
   <header class="page__header page-header">
-    <nav class="page-header__nav main-nav">
-      <a class="main-nav__logo logo" href="../index.html">
-        <img class="logo__image" src="./img/logo-temp.png" alt="Лого седоны" width="185" height="96" />
-      </a>
 
+    <a class="page-header__logo logo" href="index.html">
+      <picture>
+        <!-- <source media="(min-width: 1200px)" /> -->
+        <!-- <source media="(min-width: 768px)" /> -->
+        <img class="logo__image" src="./img/logo-temp.png" width="185" height="96" alt="Лого седоны" />
+      </picture>
+    </a>
+
+    <nav class="page-header__nav main-nav">
       <ul class="main-nav__links site-nav">
         <li class="site-nav__item">
           <a class="site-nav__link" href="index.html">Главная</a>
         </li>
         <li class="site-nav__item site-nav__item--active">
-          <a class="site-nav__link" href="#">Фото и видео</a>
+          <a class="site-nav__link">Фото и видео</a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="form.html">Форма отзыва</a>
@@ -41,9 +46,9 @@
 
   <main class="page__main">
 
-    <picture class="hero">
-      <img class="hero__title" src="./img/hero-SEDONA.svg" alt="Заголовок — Седона" />
-    </picture>
+    <div class="hero">
+      <img class="hero__title" src="./img/hero-sedona.svg" alt="Заголовок — Седона" />
+    </div>
 
     <section class="gallery container">
       <h1 class="visually-hidden">Галерея с фотографиями</h1>
@@ -61,20 +66,18 @@
 
         <ul class="photos">
           <li class="photos__item">
-            <!-- Почему при width: 100% при увеличении вьюпорта до 768 при качество изображений плохое? -->
             <picture>
-
               <img class="photos__image" src="./img/photo-1-mobile.jpg" alt="Неродные просторы" />
             </picture>
             <div class="photos__info">
               <h2 class="photos__title">Неродные просторы</h2>
               <p class="photos__author">Автор фото: Борис</p>
-              <div class="photos__like like">
-                <button class="like__button" type="button">
+              <a class="photos__like like">
+                <span class="like__button">
                   <img src="./img/like-icon.svg" width="23" height="21" alt="Кнопка лайк">
-                </button>
-                <p class="like__total-likes">1350</p>
-              </div>
+                </span>
+                <span class="like__total-likes">1350</span>
+              </a>
             </div>
           </li>
 
@@ -86,16 +89,18 @@
             <div class="photos__info">
               <h2 class="photos__title">Местная растительность</h2>
               <p class="photos__author">Автор фото: Сергей</p>
-              <div class="photos__like like">
-                <!-- Нужен ли ховер? -->
-                <!-- Как сделать кнопку оптимально, чтобы можно с кнопкой можно было взаимодействовать?  -->
-                <!-- Вставлять СВГ инлайн? А если этих картинок 500? -->
-                <!-- Если не использовать шаблонизацию иил реакт/vue? -->
-                <button class="like__button" type="button">
+              <a class="photos__like like">
+                <!-- todo: Нужен ли ховер? — см. ТЗ -->
+                <!--
+                  Как сделать кнопку оптимально, чтобы можно с кнопкой можно было взаимодействовать?
+                  Вставлять СВГ инлайн? А если этих картинок 500?
+                  — "желательно инлайн через свг спрайт"
+                -->
+                <span class="like__button">
                   <img src="./img/like-icon.svg" width="23" height="21" alt="Кнопка лайк">
-                </button>
-                <p class="like__total-likes">143</p>
-              </div>
+                </span>
+                <span class="like__total-likes">143</span>
+              </a>
             </div>
           </li>
 
@@ -107,12 +112,12 @@
             <div class="photos__info">
               <h2 class="photos__title">Дорога на север</h2>
               <p class="photos__author">Автор фото: Пётр</p>
-              <div class="photos__like like">
-                <button class="like__button" type="button">
+              <a class="photos__like like">
+                <span class="like__button">
                   <img src="./img/like-icon.svg" width="23" height="21" alt="Кнопка лайк">
-                </button>
-                <p class="like__total-likes">96</p>
-              </div>
+                </span>
+                <span class="like__total-likes">96</ы>
+            </div>
             </div>
           </li>
 
@@ -124,12 +129,12 @@
             <div class="photos__info">
               <h2 class="photos__title">Мост Дьявола</h2>
               <p class="photos__author">Автор фото: Антон</p>
-              <div class="photos__like like">
-                <button class="like__button" type="button">
+              <a class="photos__like like">
+                <span class="like__button">
                   <img src="./img/like-icon.svg" width="23" height="21" alt="Кнопка лайк">
-                </button>
-                <p class="like__total-likes">154</p>
-              </div>
+                </span>
+                <spanpan class="like__total-likes">154</spanpan>
+              </a>
             </div>
           </li>
         </ul>

@@ -25,6 +25,7 @@
 
   // todo: см 7. Векторная графика и оптимизация
   // todo: 1. Как подсветить SVG
+  // "вставив в разметку через fill к родителю"
   &::before {
     position: absolute;
     content: "";
@@ -39,6 +40,7 @@
     width: 24px;
     height: 24px;
     background-image: url("../img/vk.svg");
+    // "через свг в разметку"
   }
 
   // &--vk:hover::before {

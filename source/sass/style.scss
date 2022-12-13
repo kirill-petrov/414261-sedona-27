@@ -1,3 +1,8 @@
+// @use "./abstracts/vars"; // не работает
+// @use "./abstracts/vars" as var;
+// @use "./abstracts/vars" as *;
+// @use "./abstracts/mixins" as mix;
+
 /* Global */
 @use "./base";
 
@@ -14,7 +19,7 @@
 @use "./components/intro-core";
 @use "./components/intro";
 @use "./components/like";
-@use "./components/main-nav";
+@use "./components/page-header";
 @use "./components/photos";
 @use "./components/radio";
 @use "./components/services";
