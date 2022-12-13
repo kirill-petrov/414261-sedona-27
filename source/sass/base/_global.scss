@@ -1,0 +1,46 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+/*
+  Д16. Нет глобальных стилей тегов.
+
+  Исключения:
+    Normalize.css, который исправляет браузерные умолчания
+    Уникальные теги документа: <⁠⁠⁠⁠html>, <body>
+    Дополнительная нормализация: <a>⁠⁠⁠⁠ и <⁠⁠⁠⁠img>⁠⁠⁠⁠
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  @include mix.title-400-14-21;
+  min-height: 100vh;
+  font-family: var.$main-font;
+  color: var.$color-text-basic;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

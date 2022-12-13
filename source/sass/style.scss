@@ -1,1 +1,30 @@
-// Начните писать стили здесь
+// @use "./abstracts/vars"; // не работает
+// @use "./abstracts/vars" as var;
+// @use "./abstracts/vars" as *;
+// @use "./abstracts/mixins" as mix;
+
+/* Global */
+@use "./base";
+
+/* Components */
+@use "./components/call-to-action";
+@use "./components/checkbox";
+@use "./components/container";
+@use "./components/copyright";
+@use "./components/feature";
+@use "./components/fieldset";
+@use "./components/footer";
+@use "./components/form";
+@use "./components/hero";
+@use "./components/intro-core";
+@use "./components/intro";
+@use "./components/like";
+@use "./components/page-header";
+@use "./components/photos";
+@use "./components/radio";
+@use "./components/services";
+@use "./components/site-nav";
+@use "./components/social";
+@use "./components/submit-group";
+@use "./components/travel-details";
+@use "./components/video";

@@ -1,0 +1,57 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.site-nav {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+
+  @include mix.title-700-18-26;
+  text-transform: uppercase;
+  text-align: center;
+
+  @include mix.list-reset;
+  background-color: #678fa8;
+
+  &::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    width: 100%;
+    height: 7px;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.2) 100%
+    );
+    mix-blend-mode: normal;
+  }
+}
+
+.site-nav__item {
+  height: 55px;
+  color: var.$color-text-white;
+  background-color: var.$color-bg-primary;
+
+  &:not(:first-child) {
+    border-top: 1px solid #9ac2db;
+  }
+
+  &:hover {
+    background-color: var.$color-bg-primary-hover;
+  }
+
+  &:active {
+    color: #87b6d1;
+    background-color: var.$color-bg-primary-active;
+  }
+}
+
+.site-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: inherit;
+}

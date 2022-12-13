@@ -1,0 +1,19 @@
+@use "../abstracts/vars" as var;
+@use "../abstracts/mixins" as mix;
+
+.services {
+  text-align: left;
+  color: var.$color-text-basic;
+  background-color: var.$color-bg-white;
+
+  @include mix.list-reset;
+  padding-bottom: 46px;
+}
+
+.service__title {
+  margin-bottom: 16px;
+  padding-top: 31px;
+
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+}

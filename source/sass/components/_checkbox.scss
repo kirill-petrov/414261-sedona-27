@@ -1,0 +1,52 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+  text-transform: none;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.checkbox__input {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-right: 16px;
+  background-color: var.$color-bg-input;
+  border-radius: 4px;
+  appearance: none;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 22px;
+    height: 16px;
+    background-image: url("../../img/tick.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:checked::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/*
+  todo:
+  Д7. Все состояния элементов (смотрите стайлгайд) прописаны в стилевом файле.
+  В соответствии со стайлгайдом, который присутствует в каждом проекте, все указанные в нём элементы должны иметь соответствующие эффекты при наведении и нажатии.
+  Должны присутствовать все активные состояния, а для чекбоксов и радиокнопок прописаны состояния disabled.
+  Если в стайлгайде не предусмотрено какое-то состояние, то его реализация остаётся на усмотрение студента.
+ */

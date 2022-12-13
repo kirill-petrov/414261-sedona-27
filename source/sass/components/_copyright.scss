@@ -1,0 +1,33 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.copyright {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  color: var.$color-text-black;
+
+  &:hover {
+    color: var.$color-bg-primary;
+    fill: var.$color-bg-primary;
+  }
+
+  &:active {
+    color: var.$color-logo-active;
+    fill: var.$color-logo-active;
+  }
+}
+
+.copyright__text {
+  margin-right: 13px;
+
+  @include mix.title-400-14-21;
+  color: inherit;
+  text-transform: uppercase;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 35px;
+  fill: inherit;
+}

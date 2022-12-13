@@ -1,0 +1,56 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0 39px;
+  text-transform: uppercase;
+  border: none;
+  border-top: 1px solid #e5e5e5;
+
+  &:nth-last-of-type(1) {
+    padding-bottom: 56px;
+  }
+}
+
+.fieldset__title {
+  text-align: center;
+  margin-bottom: 20px;
+
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+}
+
+/* input type: text, tel, email */
+
+.fieldset__field {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.fieldset__label {
+  padding-left: 16px;
+}
+
+.fieldset__input {
+  @include mix.title-700-18-26;
+  color: var.$color-text-black;
+  padding: 16px 0 16px 16px;
+  border: none;
+  outline: none;
+  background-color: var.$color-bg-input;
+
+  &::placeholder {
+    color: var.$color-text-placholder;
+  }
+}
+
+.fieldset__textarea {
+  min-height: 150px;
+  resize: vertical;
+}

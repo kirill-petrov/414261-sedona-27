@@ -1,0 +1,22 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as var;
+
+.submit-group {
+  max-width: 280px;
+  padding-bottom: 24px;
+}
+
+.submit-group__button {
+  @include mix.button;
+  @include mix.title-700-21-26;
+  margin-bottom: 3px;
+}
+
+.submit-group__help-text {
+  text-align: end;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var.$color-text-helper;
+}
