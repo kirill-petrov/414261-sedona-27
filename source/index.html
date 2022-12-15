@@ -21,7 +21,8 @@
     <nav class="page-header__nav">
       <ul class="site-nav">
         <li class="site-nav__item site-nav__item--current-page">
-          <a class="site-nav__link">
+          <!-- todo: почему не работает атрибут title? -->
+          <a class="site-nav__link" title="Текущая страница">
             <span>Главная</span>
           </a>
         </li>
@@ -47,22 +48,21 @@
   </header>
 
   <main class="page__main">
-    <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
-
     <div class="hero hero--main">
       <img class="hero__title hero__title--main" src="./img/hero-welcome.svg" width="282" alt="Приветсвенный текст" />
     </div>
 
     <section class="features">
-      <!-- todo: бощий контейнер для блоков с текстом. додумать -->
-      <div class="features__intro intro">
-        <h2 class="intro__title">
+      <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
+
+      <section class="features__intro intro intro--main ">
+        <h2 class="intro__title intro__title--main">
           Седона – небольшой городок в аризоне, заслуживающий большего!
         </h2>
         <p class="intro__message">
           Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
         </p>
-      </div>
+      </section>
 
       <ol class="features__list travel-details">
         <li class="travel-details__item feature feature--extended">
