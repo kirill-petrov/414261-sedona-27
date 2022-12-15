@@ -2,12 +2,19 @@
 @use "../abstracts/mixins" as mix;
 
 .services {
+  display: grid;
+
   text-align: left;
   color: var.$color-text-basic;
   background-color: var.$color-bg-white;
 
   @include mix.list-reset;
   padding-bottom: 46px;
+
+  @media (min-width: var.$screen-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
+  }
 }
 
 .service__title {

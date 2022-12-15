@@ -1,6 +1,63 @@
-// @use "../abstracts/variables" as var;
+@use "../abstracts/vars" as var;
 @use "../abstracts/mixins" as mix;
 
 .travel-details {
   @include mix.list-reset;
+  position: relative;
+  overflow-x: hidden;
+
+  display: grid;
+
+  // todo: как избавиться от подчёркивания в 16 строке?
+  @media (max-width: var.$screen-tablet - 1px) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 768px;
+      height: 37px;
+      background-image: url("../img/travel-details.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (min-width: var.$screen-tablet) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+}
+
+.travel-details__item {
+  @media (min-width: var.$screen-tablet) {
+    &:nth-child(1) {
+      outline: 4px solid rgba(0, 255, 64, 1);
+      outline-offset: -2px;
+      // * <<
+
+      grid-column: 1 / span 3;
+      grid-row: 1 / span 2;
+    }
+    &:nth-child(2) {
+      outline: 4px solid rgba(0, 0, 255, 1);
+      outline-offset: -2px;
+      // * <<
+
+      grid-column: 1 / span 3;
+      grid-row: 3 / span 1;
+    }
+    // &:nth-child(3) {
+    //   outline: 4px solid rgba(255, 166, 0, 1);
+    //   outline-offset: -2px;
+    // }
+    // &:nth-child(4) {
+    //   outline: 4px solid rgba(41, 95, 7, 1);
+    //   outline-offset: -2px;
+    // }
+    // &:nth-child(5) {
+    //   outline: 4px solid rgba(179, 0, 255, 1);
+    //   outline-offset: -2px;
+    // }
+  }
 }

@@ -2,6 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 .feature {
+  display: grid;
   text-align: center;
   text-transform: uppercase;
   background-color: var.$color-bg-lightgrey;
@@ -10,9 +11,45 @@
     background-color: var.$color-bg-primary;
     color: var.$color-text-white;
   }
+
+  @media (min-width: var.$screen-tablet) {
+    &:nth-child(1) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-areas:
+        "t i i"
+        "s s s"
+    }
+
+    &:nth-child(1) .feature__text-wrapper {
+      grid-area: t;
+    }
+
+    &:nth-child(1) .feature__image {
+      grid-area: i;
+    }
+
+    &:nth-child(1) .feature__services {
+      grid-area: s;
+    }
+
+    &:nth-child(2) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas:
+        "i i t"
+    }
+
+    &:nth-child(2) .feature__text-wrapper {
+      grid-area: t;
+    }
+
+    &:nth-child(2) .feature__image {
+      grid-area: i;
+    }
+  }
 }
 
-.feature__typography-wrapper {
+.feature__text-wrapper {
   padding: 0 18px;
 }
 
@@ -50,9 +87,4 @@
   &--b-border {
     border-bottom: 1px solid var.$b-border;
   }
-}
-
-.feature__image {
-  outline: 5px solid rgb(17, 0, 255);
-  outline-offset: -3px;
 }
