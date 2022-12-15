@@ -2,11 +2,12 @@
 $main-font: "PT Sans", "Arial", sans-serif;
 
 /* colors */
-
 $color-text-white: #ffffff;
 $color-text-black: #000000; // заголовки
 $color-text-basic: #333333;
-
+$color-text-primary: #81B3D2;
+$color-text-active: #B2B2B2;
+$color-text-current-page: #766357;
 $color-text-helper: #858585; // на стр формы под кнопкой в одном месте
 $color-text-placholder: #a9a9a9;
 
@@ -23,3 +24,7 @@ $post-border: #e5e5e5;
 $b-border: #d6d6d6;
 
 $color-logo-active: #b3b3b3;
+
+/* media queries */
+$screen-tablet: 768px;
+$screen-desktop: 1200px;

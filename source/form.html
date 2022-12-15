@@ -14,21 +14,26 @@
       <picture>
         <!-- <source media="(min-width: 1200px)" /> -->
         <!-- <source media="(min-width: 768px)" /> -->
-        <img class="logo__image" src="./img/logo-temp.png" width="185" height="96" alt="Лого седоны" />
+        <img class="logo__image" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
       </picture>
     </a>
 
-    <nav class="page-header__nav main-nav">
-      <!-- todo CONTEINER ???  -->
-      <ul class="main-nav__links site-nav">
+    <nav class="page-header__nav">
+      <ul class="site-nav">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="index.html">Главная</a>
+          <a class="site-nav__link" href="index.html">
+            Главная
+          </a>
         </li>
         <li class="site-nav__item">
-          <a class="site-nav__link" href="catalog.html">Фото и видео</a>
+          <a class="site-nav__link" href="catalog.html">
+            Фото и видео
+          </a>
         </li>
-        <li class="site-nav__item site-nav__item--active">
-          <a class="site-nav__link">Форма отзыва</a>
+        <li class="site-nav__item site-nav__item--current-page">
+          <a class="site-nav__link">
+            Форма отзыва
+          </a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
@@ -36,9 +41,7 @@
           </a>
         </li>
       </ul>
-      <button class="main-nav__toggle-menu" type="button" aria-label="toggle-menu">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
+      <input class="page-header__toggle-menu toggle" type="checkbox" aria-label="Кнопка отображения меню">
     </nav>
   </header>
 
