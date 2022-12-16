@@ -171,29 +171,41 @@
   <footer class="page__footer footer">
     <h2 class="visually-hidden">Социальный сети</h2>
 
-    <p class="footer__tag">#visitsedona</p>
+    <p class="footer__hashtag">#visitsedona</p>
 
-    <ul class="footer__social-list social">
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Перейти на Twitter">
-          <span class="visually-hidden">Twitter</span>
+    <ul class="footer__socials socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--vk" href="#" aria-label="Перейти на Twitter">
+          <span class="visually-hidden">VK</span>
+          <!-- Способ подключения 1 -->
+          <!-- todo: svg-спрайт -->
         </a>
       </li>
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Перейти на Facebook">
-          <span class="visually-hidden">Facebook</span>
+
+      <li class="socials__item">
+        <a class="socials__link--tg" href="#" aria-label="Перейти в Telegram">
+          <span class="visually-hidden">Telegram</span>
+          <!-- Способ подключения 2 -->
+          <!-- todo: svg-спрайт -->
+          <svg class="socials__link-telega" xmlns="http://www.w3.org/2000/svg" width="22" height="18" fill="currentColor">
+            <path d="m21.44 1.622-3.17 14.944c-.239 1.055-.862 1.317-1.748.82l-4.828-3.557-2.33 2.24c-.258.259-.473.474-.97.474l.347-4.917 8.948-8.086c.39-.347-.084-.54-.604-.192L6.022 10.314 1.26 8.823C.224 8.5.205 7.787 1.476 7.29L20.103.113c.863-.323 1.617.192 1.336 1.51Z" />
+          </svg>
         </a>
       </li>
-      <li class="social__item">
-        <a class="social__link" href="#" aria-label="Перейти на YouTube">
+
+      <li class="socials__item">
+        <a class="socials__link socials__link--yt" href="#" aria-label="Перейти на YouTube">
           <span class="visually-hidden">YouTube</span>
+          <!-- Способ подключения 3 -->
+          <!-- todo: svg-спрайт -->
+          <div class="test-svg"></div>
         </a>
       </li>
     </ul>
 
-    <a class="footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На страницу курса Адаптивная вёрстка и автоматизация">
-      <p class="copyright__text">Разработано</p>
-      <svg class="copyright__logo" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
+    <a class="footer__created created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На страницу курса Адаптивная вёрстка и автоматизация">
+      <p class="created__text">Разработано</p>
+      <svg class="created__logo" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
         <path d="M13.5 0.000430316L0 1.41584V26.16L13.5 34.1928L27 26.16V1.41584L13.6416 0.0146318L13.5 0V0.000430316ZM25.2343 25.156L13.5 32.1379L1.76572 25.156V15.014L13.4501 21.9679L13.4694 23.2276L5.45379 18.4576L5.44217 19.6811L13.4892 24.5173L13.5099 25.8114L5.46498 21.0251L5.45336 22.2485L13.5004 27.0848L21.6245 22.224V20.9949L21.6142 21.001V17.0047L25.2339 14.8431V25.156H25.2343ZM25.2244 13.5271L22.014 15.4193L20.5323 16.293L13.4651 12.088L13.4531 13.3115L19.4939 16.9036L19.4405 16.9346L19.3106 17.0125L18.4516 17.5177L13.4651 14.55L13.4535 15.7735L17.3903 18.1146L16.4612 18.7356L16.4388 18.7498L13.4651 16.9974L13.4535 18.2205L15.4043 19.3695L13.4165 20.5624L1.7924 13.6528L13.4337 6.65489V6.65661L25.2252 13.5275L25.2244 13.5271ZM25.2339 12.2963L13.4376 5.34147V5.33975L13.4359 5.34104L13.4342 5.34018V5.34147L1.76658 12.2894V3.00598L13.5009 1.77604L25.2343 3.00598V12.2963H25.2339Z" />
       </svg>
     </a>
