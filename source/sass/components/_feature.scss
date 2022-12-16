@@ -18,7 +18,7 @@
       grid-template-rows: repeat(2, 1fr);
       grid-template-areas:
         "t i i"
-        "s s s"
+        "s s s";
     }
 
     &:nth-child(1) .feature__text-wrapper {
@@ -35,8 +35,7 @@
 
     &:nth-child(2) {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "i i t"
+      grid-template-areas: "i i t";
     }
 
     &:nth-child(2) .feature__text-wrapper {
