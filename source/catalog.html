@@ -54,7 +54,7 @@
       <img class="hero__title" src="/img/hero-sedona.svg" alt="Заголовок — Седона" />
     </div>
 
-    <section class="gallery container">
+    <section class="gallery">
       <h1 class="visually-hidden">Галерея с фотографиями</h1>
 
       <section class="gallery__intro intro">
@@ -120,8 +120,8 @@
                 <span class="like__button">
                   <img src="./img/like-icon.svg" width="23" height="21" alt="Кнопка лайк">
                 </span>
-                <span class="like__total-likes">96</ы>
-            </div>
+                <span class="like__total-likes">96</span>
+              </a>
             </div>
           </li>
 
@@ -143,31 +143,32 @@
           </li>
         </ul>
       </section>
-    </section>
 
-    <section class="video container">
-      <section class="video__intro intro">
-        <h2 class="intro__title">Все еще сомневаетесь?</h2>
-        <p class="intro__message">
-          Смотрите видеопрезентацию и скорее за билетами, пока они не
-          подорожали в очередной раз!
-        </p>
+      <section class="gallery__video video">
+        <section class="video__intro intro">
+          <h2 class="intro__title">Все еще сомневаетесь?</h2>
+          <p class="intro__message">
+            Смотрите видеопрезентацию и скорее за билетами, пока они не
+            подорожали в очередной раз!
+          </p>
+        </section>
+
+        <div class="video__movie-wrapper">
+          <picture>
+            <img class="video__screen-img" src="./img/video-mobile.jpg" alt="Видео о седоне" />
+          </picture>
+
+          <button class="video__button-play" type="button" aria-label="Кнопка воспроизведения">
+            <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7" />
+            </svg>
+          </button>
+        </div>
       </section>
-
-      <div class="video__movie-wrapper">
-        <picture>
-          <img class="video__screen-img" src="./img/video-mobile.jpg" alt="Видео о седоне" />
-        </picture>
-
-        <button class="video__button-play" type="button" aria-label="Кнопка воспроизведения">
-          <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7" />
-          </svg>
-        </button>
-      </div>
     </section>
-  </main>
 
+  </main>
+  <!-- todo: сетка футера на стр. каталога и формы отличается от главной -->
   <footer class="page__footer footer">
     <h2 class="visually-hidden">Социальный сети</h2>
 

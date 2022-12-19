@@ -3,11 +3,35 @@
 
 .photos {
   @include mix.list-reset;
+
+  @media (min-width: var.$screen-tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .photos__item {
+  outline: 5px solid rgba(255, 0, 0, 0.2);
+  outline-offset: -5px;
+
   position: relative;
   padding: 24px 0 25px;
+
+  @media (min-width: var.$screen-tablet) {
+    &:nth-child(1) {
+      grid-column: 1 / span 2;
+      max-height: 400px;
+      overflow: hidden; // todo: переделать
+
+      @media (min-width: var.$screen-desktop) {
+        grid-column: 1 / span 3;
+      }
+    }
+  }
 
   &::before {
     position: absolute;
@@ -17,6 +41,10 @@
     height: 1px;
     width: 100vw;
     background-color: var.$post-border;
+
+    @media (min-width: var.$screen-tablet) {
+      content: none;
+    }
   }
 
   &:last-child {
@@ -28,6 +56,10 @@
       height: 1px;
       width: 100vw;
       background-color: var.$post-border;
+
+      @media (min-width: var.$screen-tablet) {
+        content: none;
+      }
     }
   }
 }
