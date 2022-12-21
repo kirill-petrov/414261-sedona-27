@@ -13,6 +13,16 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  @media (min-width: var.$screen-tablet) {
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .checkbox__input {
@@ -20,7 +30,7 @@
   width: 46px;
   height: 46px;
   margin-right: 16px;
-  background-color: var.$color-bg-input;
+  background-color: var.$color-bg-grey;
   border-radius: 4px;
   appearance: none;
   cursor: pointer;

@@ -3,9 +3,8 @@
 
 .site-nav {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
+  display: grid;
+  row-gap: 1px;
 
   @include mix.title-700-18-26;
   text-transform: uppercase;
@@ -14,18 +13,25 @@
   @include mix.list-reset;
   background-color: #678fa8;
 
-  &::after {
-    position: absolute;
-    content: "";
-    bottom: 0;
-    width: 100%;
-    height: 7px;
-    background: linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.2) 100%
-    );
-    mix-blend-mode: normal;
+  @media (max-width: var.$screen-tablet - 1) {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      width: 100%;
+      height: 7px;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.2) 100%
+      );
+      mix-blend-mode: normal;
+    }
+  }
+
+  @media (min-width: var.$screen-tablet) {
+    grid-template-columns: repeat(5, 1fr);
+    background-color: transparent;
   }
 }
 
@@ -34,8 +40,10 @@
   color: var.$color-text-white;
   background-color: var.$color-bg-primary;
 
-  &:not(:first-child) {
-    border-top: 1px solid #9ac2db;
+  @media not screen and (min-width: var.$screen-tablet) {
+    &:not(:first-child) {
+      border-top: 1px solid #9ac2db;
+    }
   }
 
   &:hover {
@@ -46,12 +54,35 @@
     color: #87b6d1;
     background-color: var.$color-bg-primary-active;
   }
+
+  @media (min-width: var.$screen-tablet) {
+    color: var.$color-text-black;
+    background-color: transparent;
+
+    &:nth-child(3) {
+      grid-column: 4 / 5;
+    }
+
+    &:hover {
+      color: var.$color-text-primary;
+      background-color: transparent;
+    }
+
+    &:active {
+      color: var.$color-text-active;
+      background-color: transparent;
+    }
+
+    &--current-page {
+      color: var.$color-text-current-page;
+      pointer-events: none;
+    }
+  }
 }
 
 .site-nav__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-content: center;
   height: 100%;
   color: inherit;
 }

@@ -10,13 +10,12 @@
 @use "./components/call-to-action";
 @use "./components/checkbox";
 @use "./components/container";
-@use "./components/copyright";
+@use "./components/created";
 @use "./components/feature";
 @use "./components/fieldset";
 @use "./components/footer";
 @use "./components/form";
 @use "./components/hero";
-@use "./components/intro-core";
 @use "./components/intro";
 @use "./components/like";
 @use "./components/page-header";
@@ -24,7 +23,10 @@
 @use "./components/radio";
 @use "./components/services";
 @use "./components/site-nav";
-@use "./components/social";
+@use "./components/socials";
 @use "./components/submit-group";
+@use "./components/toggle";
 @use "./components/travel-details";
 @use "./components/video";
+@use "./components/page";
+@use "./components/gallery";

@@ -1,4 +1,27 @@
+.page-header {
+  position: relative;
+  z-index: 1;
+
+  // height: 56px; // по макету
+  height: 55px;
+}
+
 .page-header__logo {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  margin: 0 auto;
+}
+
+// .page-header__nav {
+// }
+
+.page-header__toggle-menu {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  z-index: 2;
 }

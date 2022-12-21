@@ -1,11 +1,22 @@
 @use "../abstracts/mixins" as mix;
 @use "../abstracts/vars" as var;
 
-.copyright {
+.created {
   display: flex;
   align-items: center;
-  height: 35px;
   color: var.$color-text-black;
+
+  @include mix.title-400-14-21;
+  text-transform: uppercase;
+
+  @media (min-width: var.$screen-tablet) {
+    justify-content: flex-end;
+    padding-right: 76px;
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    padding-right: 136px;
+  }
 
   &:hover {
     color: var.$color-bg-primary;
@@ -18,15 +29,11 @@
   }
 }
 
-.copyright__text {
+.created__text {
   margin-right: 13px;
-
-  @include mix.title-400-14-21;
-  color: inherit;
-  text-transform: uppercase;
 }
 
-.copyright__logo {
+.created__logo {
   width: 27px;
   height: 35px;
   fill: inherit;

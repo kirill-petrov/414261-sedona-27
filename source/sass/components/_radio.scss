@@ -8,24 +8,30 @@
   @include mix.title-700-18-26;
   color: var.$color-text-black;
   text-transform: none;
-
   cursor: pointer;
 
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  @media (min-width: var.$screen-tablet) {
+    padding-left: 8px;
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .radio__input {
   position: relative;
-
   width: 46px;
   height: 46px;
   margin-right: 16px;
-
-  background-color: var.$color-bg-input;
+  background-color: var.$color-bg-grey;
   border-radius: 50%;
-
   appearance: none;
   cursor: pointer;
 
@@ -34,11 +40,9 @@
     content: "";
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-
     width: 16px;
     height: 16px;
-
+    transform: translate(-50%, -50%) scale(0);
     background-color: var.$color-text-basic;
     border-radius: 50%;
   }

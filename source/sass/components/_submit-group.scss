@@ -2,21 +2,38 @@
 @use "../abstracts/vars" as var;
 
 .submit-group {
-  max-width: 280px;
-  padding-bottom: 24px;
+  @media (min-width: var.$screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .submit-group__button {
   @include mix.button;
   @include mix.title-700-21-26;
   margin-bottom: 3px;
+
+  @media (min-width: var.$screen-tablet) {
+    width: 324px;
+    margin: 0;
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    width: 384px;
+  }
 }
 
 .submit-group__help-text {
+  margin: 0;
   text-align: end;
   font-weight: 400;
   font-size: 12px;
   line-height: 21px;
   text-transform: uppercase;
   color: var.$color-text-helper;
+
+  @media (min-width: var.$screen-tablet) {
+    font-size: 14px;
+  }
 }

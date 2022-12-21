@@ -2,27 +2,109 @@
 @use "../abstracts/vars" as var;
 
 .fieldset {
-  display: flex;
-  flex-direction: column;
-  padding: 24px 0 39px;
+  position: relative;
+  margin: 0;
   text-transform: uppercase;
   border: none;
-  border-top: 1px solid #e5e5e5;
 
-  &:nth-last-of-type(1) {
-    padding-bottom: 56px;
+  &:nth-child(1) {
+    padding: 24px 0 39px;
+  }
+
+  &:nth-child(2) {
+    padding: 24px 0 34px;
+  }
+
+  &:nth-child(n + 3) {
+    padding: 24px 0 24px;
+  }
+
+  @media (min-width: var.$screen-tablet) {
+    &:nth-child(1) {
+      margin-bottom: 93px;
+      padding: 54px 43px 0 0;
+      border-right: 1px solid var.$post-border;
+    }
+
+    &:nth-child(2) {
+      padding: 54px 0 0 43px;
+    }
+
+    &:nth-child(3) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 40px 28px 74px;
+
+      @media (min-width: var.$screen-desktop) {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 58px 0 100px;
+      }
+    }
+
+    &:nth-child(4) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 84px 68px;
+
+      @media (min-width: var.$screen-desktop) {
+        grid-template-columns: repeat(4, 1fr);
+        padding: 86px 44px 100px;
+      }
+    }
+
+    &:last-child {
+      padding: 40px 0 64px;
+    }
+
+    &:nth-child(n + 3) {
+      border-top: 1px solid var.$post-border;
+    }
+
+    &:nth-child(n + 3) > .fieldset__title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 400px;
+      transform: translate(-50%, -50%);
+    }
+
+    &:nth-child(-n + 2) > .fieldset__title {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -20px;
+    height: 1px;
+    width: 100vw;
+    background-color: var.$post-border;
+
+    @media (min-width: var.$screen-tablet) {
+      content: none;
+    }
   }
 }
 
 .fieldset__title {
   text-align: center;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 
   @include mix.title-700-18-26;
   color: var.$color-text-black;
-}
 
-/* input type: text, tel, email */
+  @media (min-width: var.$screen-tablet) {
+    margin: 0;
+
+    @include mix.title-700-21-26;
+    background-color: var.$color-bg-white;
+  }
+}
 
 .fieldset__field {
   display: flex;
@@ -38,12 +120,14 @@
 }
 
 .fieldset__input {
+  width: 100%;
+  padding: 16px 0 16px 16px;
+
   @include mix.title-700-18-26;
   color: var.$color-text-black;
-  padding: 16px 0 16px 16px;
   border: none;
   outline: none;
-  background-color: var.$color-bg-input;
+  background-color: var.$color-bg-grey;
 
   &::placeholder {
     color: var.$color-text-placholder;
@@ -51,6 +135,16 @@
 }
 
 .fieldset__textarea {
+  display: block;
   min-height: 150px;
+  margin-bottom: 56px;
   resize: vertical;
+
+  @media (min-width: var.$screen-tablet) {
+    margin-bottom: 48px;
+  }
+}
+
+.fieldset__submit-group {
+  margin: 0 auto;
 }
