@@ -3,7 +3,6 @@
 
 .intro {
   display: grid;
-
   padding: 36px 0 28px;
   text-transform: uppercase;
   text-align: center;
@@ -15,11 +14,14 @@
 }
 
 .intro__title {
-  margin: 0;
-  margin-bottom: 24px;
+  margin: 0 0 24px 0;
 
   @include mix.title-700-18-26;
   color: var.$color-text-black;
+
+  @media (min-width: var.$screen-tablet) {
+    @include mix.title-700-30-26;
+  }
 
   &--main {
     margin-bottom: 35px;
@@ -28,4 +30,8 @@
 
 .intro__message {
   margin: 0;
+
+  @media (min-width: var.$screen-tablet) {
+    @include mix.title-400-14-24;
+  }
 }

@@ -50,7 +50,7 @@
       <img class="hero__title" src="img/hero-sedona.svg" width="229" alt="Заголовок — Седона" />
     </div>
 
-    <section class="feedback container">
+    <section class="feedback">
       <h1 class="visually-hidden">Форма для отзыва</h1>
 
       <section class="feedback__intro intro">
@@ -82,7 +82,8 @@
         </fieldset>
 
         <fieldset class="form__fieldset fieldset">
-          <h2 class="fieldset__title">Контактная информация:</h2>
+          <h2 class="fieldset__title">Контактная&nbsp;информация:</h2>
+
           <label class="fieldset__field">
             <span class="fieldset__label">
               Контактный телефон<sup>*</sup>:
@@ -139,20 +140,18 @@
         <!-- TEXTAREA -->
         <fieldset class="form__fieldset fieldset">
           <h2 class="fieldset__title">Опишите свои эмоции:</h2>
-          <label class="fieldset__field">
-            <textarea class="fieldset__input fieldset__textarea" name="comment" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
-          </label>
-        </fieldset>
 
-        <div class="form__submit-group submit-group">
-          <button class="submit-group__button" type="submit" aria-label="Отправить отзыв">
-            Отправить отзыв
-          </button>
-          <p class="submit-group__help-text">* — обязательные поля</p>
-        </div>
+          <textarea class="fieldset__input fieldset__textarea" name="comment" rows="3" placeholder="Опишите подробно все свои восторги"></textarea>
+
+          <div class="fieldset__submit-group submit-group">
+            <button class="submit-group__button" type="submit" aria-label="Отправить отзыв">
+              Отправить отзыв
+            </button>
+            <p class="submit-group__help-text">* — обязательные поля</p>
+          </div>
+        </fieldset>
       </form>
     </section>
-
   </main>
 
   <footer class="page__footer footer">

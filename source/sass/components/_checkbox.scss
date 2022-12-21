@@ -13,6 +13,16 @@
   &:not(:last-child) {
     margin-bottom: 16px;
   }
+
+  @media (min-width: var.$screen-tablet) {
+    &:last-child {
+      margin-bottom: 16px;
+    }
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .checkbox__input {

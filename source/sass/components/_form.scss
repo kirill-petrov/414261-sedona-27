@@ -1,5 +1,25 @@
-.form__submit-group {
-  display: flex;
-  flex-direction: column;
-  margin: 0 auto;
+@use "../abstracts/vars" as var;
+
+.form {
+  display: grid;
+  padding: 0 20px;
+  background-color: var.$color-bg-white;
+  overflow-x: hidden;
+
+  @media (min-width: var.$screen-tablet) {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 60px;
+  }
+
+  @media (min-width: var.$screen-desktop) {
+    padding: 0 120px;
+  }
+}
+
+.form__fieldset {
+  @media (min-width: var.$screen-tablet) {
+    &:nth-child(n + 3) {
+      grid-column: 1 / span 2;
+    }
+  }
 }
