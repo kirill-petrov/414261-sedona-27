@@ -1,27 +1,17 @@
+@use "../abstracts/vars" as *;
+
 .page-header {
   position: relative;
   z-index: 1;
+  height: 56px;
+  background-color: $color-bg-white;
 
-  // height: 56px; // по макету
-  height: 55px;
 }
 
 .page-header__logo {
   position: absolute;
-  content: "";
   top: 0;
   left: 50%;
   transform: translate(-50%, 0);
-
-  margin: 0 auto;
-}
-
-// .page-header__nav {
-// }
-
-.page-header__toggle-menu {
-  position: absolute;
-  top: 17px;
-  right: 20px;
-  z-index: 2;
+  min-width: 185px;
 }

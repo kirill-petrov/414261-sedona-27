@@ -6,42 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/index.js"></script>
 </head>
 
 <body class="page__body">
-  <header class="page__header page-header">
-    <a class="page-header__logo logo" href="index.html">
+  <header class="page-header">
+    <a>
       <picture>
-        <!-- <source media="(min-width: 1200px)" /> -->
-        <!-- <source media="(min-width: 768px)" /> -->
-        <img class="logo__image" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
+        <img class="page-header__logo" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
       </picture>
     </a>
 
-    <nav class="page-header__nav">
-      <ul class="site-nav">
+    <nav class="site-nav site-nav--opened site-nav--no-js">
+      <button class="site-nav__toggle-menu" type="button" aria-label="Кнопка отображения меню">
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+      <ul class="site-nav__list">
         <li class="site-nav__item">
-          <a class="site-nav__link" href="index.html">
-            Главная
+          <a class="site-nav__link" href="index.html" title="Текущая страница">
+            <span>Главная</span>
           </a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="catalog.html">
-            Фото и видео
+            <span>Фото и видео</span>
           </a>
         </li>
         <li class="site-nav__item site-nav__item--current-page">
           <a class="site-nav__link">
-            Форма отзыва
+            <span>Форма отзыва</span>
           </a>
         </li>
         <li class="site-nav__item">
           <a class="site-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
-            HTMl Academy
+            <span>HTMl Academy</span>
           </a>
         </li>
       </ul>
-      <input class="page-header__toggle-menu toggle" type="checkbox" aria-label="Кнопка отображения меню">
     </nav>
   </header>
 

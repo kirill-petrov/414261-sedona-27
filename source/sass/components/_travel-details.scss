@@ -8,8 +8,7 @@
 
   display: grid;
 
-  // todo: как избавиться от подчёркивания в 16 строке?
-  @media (max-width: var.$screen-tablet - 1px) {
+  @media (max-width: var.$screen-mobile) {
     &::before {
       position: absolute;
       content: "";

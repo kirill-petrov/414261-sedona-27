@@ -1,19 +1,105 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 @use "../abstracts/mixins" as mix;
 
 .site-nav {
   position: relative;
-  display: grid;
-  row-gap: 1px;
 
   @include mix.title-700-18-26;
   text-transform: uppercase;
   text-align: center;
+}
 
+.site-nav__toggle-menu {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.site-nav--closed .site-nav__toggle-menu {
+  @media (max-width: $screen-mobile) {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 23px;
+      height: 4px;
+      background-color: $color-bg-primary;
+      box-shadow: 0 9px 0 0 $color-bg-primary,
+        0 18px 0 0 $color-bg-primary;
+    }
+
+    &:hover:before {
+      background-color: $menu-burger-hover;
+      box-shadow: 0 9px 0 0 $menu-burger-hover,
+        0 18px 0 0 $menu-burger-hover;
+    }
+
+    &:active:before {
+      background-color: $menu-burger-active;
+      box-shadow: 0 9px 0 0 $menu-burger-active,
+        0 18px 0 0 $menu-burger-active;
+    }
+  }
+}
+
+.site-nav--opened .site-nav__toggle-menu {
+  @media (max-width: $screen-mobile) {
+    z-index: 2;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 3px;
+      width: 28px;
+      height: 4px;
+      background-color: $color-bg-white;
+      transform-origin: top right;
+      transform: rotate(-45deg);
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 3px;
+      width: 28px;
+      height: 4px;
+      background-color: $color-bg-white;
+      transform-origin: top left;
+      transform: rotate(45deg);
+    }
+
+    &:hover:before,
+    &:hover::after {
+      background-color: $menu-close-hover;
+    }
+
+    &:active:before,
+    &:active::after {
+      background-color: $menu-close-active;
+    }
+  }
+}
+
+.site-nav--closed .site-nav__list {
+  @media (max-width: $screen-mobile) {
+    display: none;
+  }
+}
+
+.site-nav__list {
   @include mix.list-reset;
-  background-color: #678fa8;
 
-  @media (max-width: var.$screen-tablet - 1) {
+  display: grid;
+
+  @media (max-width: $screen-mobile) {
     &::after {
       position: absolute;
       content: "";
@@ -29,34 +115,38 @@
     }
   }
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-template-columns: repeat(5, 1fr);
     background-color: transparent;
   }
 }
 
 .site-nav__item {
-  height: 55px;
-  color: var.$color-text-white;
-  background-color: var.$color-bg-primary;
+  height: 56px;
+  color: $color-text-white;
+  background-color: $color-bg-primary;
 
-  @media not screen and (min-width: var.$screen-tablet) {
+  @media not screen and (min-width: $screen-tablet) {
     &:not(:first-child) {
       border-top: 1px solid #9ac2db;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #678fa8;
     }
   }
 
   &:hover {
-    background-color: var.$color-bg-primary-hover;
+    background-color: $color-bg-primary-hover;
   }
 
   &:active {
     color: #87b6d1;
-    background-color: var.$color-bg-primary-active;
+    background-color: $color-bg-primary-active;
   }
 
-  @media (min-width: var.$screen-tablet) {
-    color: var.$color-text-black;
+  @media (min-width: $screen-tablet) {
+    color: $color-text-black;
     background-color: transparent;
 
     &:nth-child(3) {
@@ -64,17 +154,17 @@
     }
 
     &:hover {
-      color: var.$color-text-primary;
+      color: $color-text-primary;
       background-color: transparent;
     }
 
     &:active {
-      color: var.$color-text-active;
+      color: $color-text-active;
       background-color: transparent;
     }
 
     &--current-page {
-      color: var.$color-text-current-page;
+      color: $color-text-current-page;
       pointer-events: none;
     }
   }
