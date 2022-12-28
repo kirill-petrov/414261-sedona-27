@@ -1,26 +1,81 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 @use "../abstracts/mixins" as mix;
 
 .services {
-  display: grid;
-
-  text-align: left;
-  color: var.$color-text-basic;
-  background-color: var.$color-bg-white;
-
   @include mix.list-reset;
-  padding-bottom: 46px;
+  display: grid;
+  row-gap: 25px;
+  padding: 31px 18px 46px 65px;
+  text-align: left;
+  color: $color-text-basic;
+  background-color: $color-bg-white;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-template-columns: repeat(3, 1fr);
-    padding: 0;
+    padding: 152px 0 61px 0;
   }
 }
 
-.service__title {
-  margin-bottom: 16px;
-  padding-top: 31px;
+.services__item {
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 190px;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 
+.services__title {
   @include mix.title-700-18-26;
-  color: var.$color-text-black;
+  position: relative;
+  margin: 0 0 16px;
+  color: $color-text-black;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    left: -47px;
+    width: 40px;
+    height: 40px;
+  }
+
+  &--house::before {
+    background: url("../img/services-house.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--eat::before {
+    background: url("../img/services-house.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--souvenirs::before {
+    background: url("../img/services-house.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $screen-tablet) {
+    @include mix.title-700-21-26;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -14px;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.services__description {
+  @include mix.title-400-14-21;
+  margin: 0;
 }
