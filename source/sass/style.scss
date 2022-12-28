@@ -15,10 +15,13 @@
 @use "./components/fieldset";
 @use "./components/footer";
 @use "./components/form";
+@use "./components/gallery";
 @use "./components/hero";
 @use "./components/intro";
 @use "./components/like";
+@use "./components/map";
 @use "./components/page-header";
+@use "./components/page";
 @use "./components/photos";
 @use "./components/radio";
 @use "./components/services";
@@ -27,5 +30,3 @@
 @use "./components/submit-group";
 @use "./components/travel-details";
 @use "./components/video";
-@use "./components/page";
-@use "./components/gallery";
