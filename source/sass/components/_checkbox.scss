@@ -1,12 +1,12 @@
 @use "../abstracts/mixins" as mix;
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .checkbox {
   display: flex;
   align-items: center;
 
   @include mix.title-700-18-26;
-  color: var.$color-text-black;
+  color: $color-black;
   text-transform: none;
   cursor: pointer;
 
@@ -14,13 +14,13 @@
     margin-bottom: 16px;
   }
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &:last-child {
       margin-bottom: 16px;
     }
   }
 
-  @media (min-width: var.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin-bottom: 0;
   }
 }
@@ -30,7 +30,7 @@
   width: 46px;
   height: 46px;
   margin-right: 16px;
-  background-color: var.$color-bg-grey;
+  background-color: $color-bg-grey;
   border-radius: 4px;
   appearance: none;
   cursor: pointer;

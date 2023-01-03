@@ -29,18 +29,18 @@
       right: 0;
       width: 23px;
       height: 4px;
-      background-color: $color-bg-primary;
-      box-shadow: 0 9px 0 0 $color-bg-primary,
-        0 18px 0 0 $color-bg-primary;
+      background-color: $color-primary;
+      box-shadow: 0 9px 0 0 $color-primary,
+        0 18px 0 0 $color-primary;
     }
 
-    &:hover:before {
+    &:hover::before {
       background-color: $menu-burger-hover;
       box-shadow: 0 9px 0 0 $menu-burger-hover,
         0 18px 0 0 $menu-burger-hover;
     }
 
-    &:active:before {
+    &:active::before {
       background-color: $menu-burger-active;
       box-shadow: 0 9px 0 0 $menu-burger-active,
         0 18px 0 0 $menu-burger-active;
@@ -59,7 +59,7 @@
       right: 3px;
       width: 28px;
       height: 4px;
-      background-color: $color-bg-white;
+      background-color: $color-white;
       transform-origin: top right;
       transform: rotate(-45deg);
     }
@@ -71,17 +71,17 @@
       left: 3px;
       width: 28px;
       height: 4px;
-      background-color: $color-bg-white;
+      background-color: $color-white;
       transform-origin: top left;
       transform: rotate(45deg);
     }
 
-    &:hover:before,
+    &:hover::before,
     &:hover::after {
       background-color: $menu-close-hover;
     }
 
-    &:active:before,
+    &:active::before,
     &:active::after {
       background-color: $menu-close-active;
     }
@@ -123,8 +123,8 @@
 
 .site-nav__item {
   height: 56px;
-  color: $color-text-white;
-  background-color: $color-bg-primary;
+  color: $color-white;
+  background-color: $color-primary;
 
   @media not screen and (min-width: $screen-tablet) {
     &:not(:first-child) {
@@ -137,16 +137,16 @@
   }
 
   &:hover {
-    background-color: $color-bg-primary-hover;
+    background-color: $color-primary-hover;
   }
 
   &:active {
     color: #87b6d1;
-    background-color: $color-bg-primary-active;
+    background-color: $color-primary-active;
   }
 
   @media (min-width: $screen-tablet) {
-    color: $color-text-black;
+    color: $color-black;
     background-color: transparent;
 
     &:nth-child(3) {
@@ -154,7 +154,7 @@
     }
 
     &:hover {
-      color: $color-text-primary;
+      color: $color-primary;
       background-color: transparent;
     }
 

@@ -1,4 +1,4 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 @use "../abstracts/mixins" as mix;
 
 .travel-details {
@@ -7,7 +7,7 @@
   overflow-x: hidden;
   display: grid;
 
-  @media (max-width: var.$screen-mobile) {
+  @media (max-width: $screen-mobile) {
     &::before {
       position: absolute;
       content: "";
@@ -21,17 +21,17 @@
     }
   }
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 256px 256px;
   }
 }
 
 .travel-details__item {
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &:nth-child(1) {
       grid-column: 1 / span 3;
-      grid-row:1 / span 1;
+      grid-row: 1 / span 1;
     }
 
     &:nth-child(2) {

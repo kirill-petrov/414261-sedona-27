@@ -1,5 +1,5 @@
 @use "../abstracts/mixins" as mix;
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .fieldset {
   position: relative;
@@ -19,11 +19,11 @@
     padding: 24px 0 24px;
   }
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &:nth-child(1) {
       margin-bottom: 93px;
       padding: 54px 43px 0 0;
-      border-right: 1px solid var.$post-border;
+      border-right: 1px solid $post-border;
     }
 
     &:nth-child(2) {
@@ -35,7 +35,7 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 40px 28px 74px;
 
-      @media (min-width: var.$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         grid-template-columns: repeat(3, 1fr);
         padding: 58px 0 100px;
       }
@@ -46,7 +46,7 @@
       grid-template-columns: repeat(2, 1fr);
       padding: 84px 68px;
 
-      @media (min-width: var.$screen-desktop) {
+      @media (min-width: $screen-desktop) {
         grid-template-columns: repeat(4, 1fr);
         padding: 86px 44px 100px;
       }
@@ -57,7 +57,7 @@
     }
 
     &:nth-child(n + 3) {
-      border-top: 1px solid var.$post-border;
+      border-top: 1px solid $post-border;
     }
 
     &:nth-child(n + 3) > .fieldset__title {
@@ -83,9 +83,9 @@
     left: -20px;
     height: 1px;
     width: 100vw;
-    background-color: var.$post-border;
+    background-color: $post-border;
 
-    @media (min-width: var.$screen-tablet) {
+    @media (min-width: $screen-tablet) {
       content: none;
     }
   }
@@ -96,13 +96,13 @@
   margin: 0 0 20px;
 
   @include mix.title-700-18-26;
-  color: var.$color-text-black;
+  color: $color-black;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     margin: 0;
 
     @include mix.title-700-21-26;
-    background-color: var.$color-bg-white;
+    background-color: $color-white;
   }
 }
 
@@ -124,13 +124,13 @@
   padding: 16px 0 16px 16px;
 
   @include mix.title-700-18-26;
-  color: var.$color-text-black;
+  color: $color-black;
   border: none;
   outline: none;
-  background-color: var.$color-bg-grey;
+  background-color: $color-bg-grey;
 
   &::placeholder {
-    color: var.$color-text-placholder;
+    color: $color-text-placholder;
   }
 }
 
@@ -140,7 +140,7 @@
   margin-bottom: 56px;
   resize: vertical;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     margin-bottom: 48px;
   }
 }

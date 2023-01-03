@@ -7,8 +7,8 @@
   background-color: $color-bg-lightgrey;
 
   &--extended {
-    background-color: $color-bg-primary;
-    color: $color-text-white;
+    background-color: $color-primary;
+    color: $color-white;
   }
 
   @media (min-width: $screen-tablet) {

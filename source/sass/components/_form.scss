@@ -1,23 +1,23 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .form {
   display: grid;
   padding: 0 20px;
-  background-color: var.$color-bg-white;
+  background-color: $color-white;
   overflow-x: hidden;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     grid-template-columns: 1fr 1fr;
     padding: 0 60px;
   }
 
-  @media (min-width: var.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 0 120px;
   }
 }
 
 .form__fieldset {
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     &:nth-child(n + 3) {
       grid-column: 1 / span 2;
     }

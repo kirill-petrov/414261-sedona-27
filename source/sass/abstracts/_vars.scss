@@ -2,23 +2,21 @@
 $main-font: "PT Sans", "Arial", sans-serif;
 
 /* colors */
-$color-text-white: #ffffff;
-$color-text-black: #000000; // заголовки
+$color-black: #000000;
+$color-white: #ffffff;
+$color-primary: #81b3d2;
+$color-primary-hover: #669ec0;
+$color-primary-active: #5496bd;
+
 $color-text-basic: #333333;
-$color-text-primary: #81b3d2;
 $color-text-active: #b2b2b2;
 $color-text-current-page: #766357;
 $color-text-helper: #858585; // на стр формы под кнопкой в одном месте
 $color-text-placholder: #a9a9a9;
 
-$color-bg-white: #ffffff;
-$color-bg-primary: #81b3d2;
-$color-bg-primary-hover: #669ec0;
-$color-bg-primary-active: #5496bd;
 $color-bg-lightgrey: #eeeeee; //?
 $color-bg-grey: #f2f2f2;
 
-$disabled: #e5e5e5;
 $post-border: #e5e5e5;
 
 $color-logo-active: #b3b3b3;

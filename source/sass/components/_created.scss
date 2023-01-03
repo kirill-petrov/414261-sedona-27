@@ -1,31 +1,31 @@
 @use "../abstracts/mixins" as mix;
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .created {
   display: flex;
   align-items: center;
-  color: var.$color-text-black;
+  color: $color-black;
 
   @include mix.title-400-14-21;
   text-transform: uppercase;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     justify-content: flex-end;
     padding-right: 76px;
   }
 
-  @media (min-width: var.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding-right: 136px;
   }
 
   &:hover {
-    color: var.$color-bg-primary;
-    fill: var.$color-bg-primary;
+    color: $color-primary;
+    fill: $color-primary;
   }
 
   &:active {
-    color: var.$color-logo-active;
-    fill: var.$color-logo-active;
+    color: $color-logo-active;
+    fill: $color-logo-active;
   }
 }
 

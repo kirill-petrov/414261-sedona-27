@@ -1,14 +1,15 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .gallery {
   padding: 0 20px;
   overflow-x: hidden;
+  background-color: $color-white;
 
-  @media (min-width: var.$screen-tablet) {
+  @media (min-width: $screen-tablet) {
     padding: 0 60px;
   }
 
-  @media (min-width: var.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     padding: 0;
   }
 }

@@ -8,7 +8,7 @@
   padding: 31px 18px 46px 65px;
   text-align: left;
   color: $color-text-basic;
-  background-color: $color-bg-white;
+  background-color: $color-white;
 
   @media (min-width: $screen-tablet) {
     grid-template-columns: repeat(3, 1fr);
@@ -31,7 +31,7 @@
   @include mix.title-700-18-26;
   position: relative;
   margin: 0 0 16px;
-  color: $color-text-black;
+  color: $color-black;
 
   &::before {
     position: absolute;
