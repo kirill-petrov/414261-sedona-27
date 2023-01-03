@@ -1,19 +1,25 @@
+@use "../abstracts/vars" as *;
 @use "../abstracts/mixins" as mix;
 
 .like {
   display: flex;
   align-items: center;
   height: 21px;
-}
-
-.like__button {
-  margin: 0;
-  margin-right: 14px;
   padding: 0;
   border: none;
   background: none;
-  // overflow: visible; //? уточнить суть свойства
   cursor: pointer;
+}
+
+.like__icon {
+  margin: 0;
+  margin-right: 14px;
+  padding: 0;
+  fill: #a4a4a4;
+
+  @media (min-width: $screen-desktop) {
+    fill: $color-white;
+  }
 }
 
 .like__total-likes {
