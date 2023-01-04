@@ -54,12 +54,12 @@
     </div>
 
     <section class="gallery">
-      <h1 class="visually-hidden">Галерея с фотографиями</h1>
+      <h1 class="visually-hidden">Галерея с фото и видео</h1>
 
-      <section class="gallery__intro intro">
+      <section class="gallery__intro intro intro--photos">
         <h2 class="intro__title">Фото и видео</h2>
         <p class="intro__message">
-          Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии помогут
+          Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии&nbsp;помогут
           вам забыть о&nbsp;политике и&nbsp;экономике.
         </p>
       </section>
@@ -138,25 +138,28 @@
       </section>
 
       <section class="gallery__video video">
-        <section class="video__intro intro">
+        <h1 class="visually-hidden">Видео</h1>
+
+        <section class="intro intro--video">
           <h2 class="intro__title">Все еще сомневаетесь?</h2>
           <p class="intro__message">
-            Смотрите видеопрезентацию и скорее за билетами, пока они не
-            подорожали в очередной раз!
+            Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!
           </p>
         </section>
 
-        <div class="video__movie-wrapper">
-          <picture>
-            <img class="video__screen-img" src="./img/video-mobile.jpg" alt="Видео о седоне" />
-          </picture>
+        <section class="video__player-wrapper">
+          <div class="player">
+            <button class="player__button" type="button" aria-label="Кнопка воспроизведения">
+              <span class="visually-hidden">Воспроизвести</span>
+            </button>
 
-          <button class="video__button-play" type="button" aria-label="Кнопка воспроизведения">
-            <svg width="48" height="54" viewBox="0 0 48 54" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M48 27L0 54L2.42273e-06 0L48 27Z" fill="white" fill-opacity="0.7" />
-            </svg>
-          </button>
-        </div>
+            <div class="player__container">
+              <video poster="../img/video-poster.jpg">
+                Your browser doesn't support HTML5 video tag.
+              </video>
+            </div>
+          </div>
+        </section>
       </section>
     </section>
 

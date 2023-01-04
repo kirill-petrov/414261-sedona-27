@@ -3,7 +3,6 @@
 
 .intro {
   display: grid;
-  justify-content: center;
   padding: 37px 0 25px;
   text-transform: uppercase;
   text-align: center;
@@ -20,12 +19,37 @@
   &--main {
     padding: 32px 18px 16px;
   }
+
+  &--photos {
+    padding: 37px 0 25px;
+
+    @media (min-width: $screen-tablet) {
+      max-width: 458px;
+      padding: 67px 0 87px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      padding: 105px 0 89px;
+    }
+  }
+
+  &--video {
+    padding: 17px 0 38px;
+
+    @media (min-width: $screen-tablet) {
+      max-width: 445px;
+      padding: 63px 0 90px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      padding: 62px 0 88px;
+    }
+  }
 }
 
 .intro__title {
-  margin: 0 0 24px 0;
-
   @include mix.title-700-18-26;
+  margin: 0 0 24px 0;
   color: $color-black;
 
   @media (min-width: $screen-tablet) {
@@ -36,9 +60,8 @@
     margin-bottom: 35px;
 
     @media (min-width: $screen-tablet) {
-      max-width: 520px;
-
       @include mix.title-700-21-26;
+      max-width: 520px;
     }
   }
 }
