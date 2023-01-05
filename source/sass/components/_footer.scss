@@ -43,5 +43,13 @@
 .footer__created {
   @media (min-width: $screen-tablet) {
     flex-basis: calc(100% / 3);
+
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 76px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-right: 136px;
   }
 }

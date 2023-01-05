@@ -2,20 +2,14 @@
 @use "../abstracts/vars" as *;
 
 .created {
+  @include mix.title-400-14-21;
   display: flex;
   align-items: center;
   color: $color-black;
-
-  @include mix.title-400-14-21;
   text-transform: uppercase;
 
   @media (min-width: $screen-tablet) {
     justify-content: flex-end;
-    padding-right: 76px;
-  }
-
-  @media (min-width: $screen-desktop) {
-    padding-right: 136px;
   }
 
   &:hover {
