@@ -107,11 +107,44 @@
 }
 
 .fieldset__field {
+  position: relative;
   display: flex;
   flex-direction: column;
 
   &:not(:last-child) {
     margin-bottom: 16px;
+  }
+
+  &--phone {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 58px;
+      height: 58px;
+      background-image: url("../img/icon-phone.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #E6E6E6;
+    }
+  }
+
+  &--email {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      width: 58px;
+      height: 58px;
+      background-image: url("../img/icon-email.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #E6E6E6;
+    }
   }
 }
 
@@ -121,16 +154,22 @@
 
 .fieldset__input {
   width: 100%;
-  padding: 16px 0 16px 16px;
+  padding: 16px;
 
   @include mix.title-700-18-26;
   color: $color-black;
   border: none;
   outline: none;
   background-color: $color-bg-grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
 
   &::placeholder {
     color: $color-text-placholder;
+  }
+
+  &--increased-padding {
+    padding-right: 16px + 58px;
   }
 }
 
