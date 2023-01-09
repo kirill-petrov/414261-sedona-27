@@ -1,17 +1,17 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .page {
-  background-color: var.$color-bg-grey;
+  background-color: $color-bg-grey;
 }
 
 .page__body {
-  // background-color: #ff7f50;
+  background-color: #ff7f50;
 
-  @media (min-width: var.$screen-desktop) {
+  @media (min-width: $screen-desktop) {
     margin: 0 auto;
     max-width: 1200px;
 
-    background: var.$color-bg-white;
+    background: $color-white;
     mix-blend-mode: normal;
     box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   }

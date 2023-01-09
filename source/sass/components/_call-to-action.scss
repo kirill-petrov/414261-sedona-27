@@ -1,30 +1,36 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 @use "../abstracts/mixins" as mix;
 
 .call-to-action {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 18px 49px;
+  padding: 38px 18px 49px;
   text-transform: uppercase;
+  background-color: $color-white;
+
+  @media (min-width: $screen-tablet) {
+    padding: 61px 18px 66px;
+  }
 }
 
 .call-to-action__title {
-  margin-bottom: 31px;
-  padding-top: 40px;
-
   @include mix.title-700-21-26;
+  margin: 0 0 31px 0;
+
+  @media (min-width: $screen-tablet) {
+    @include mix.title-700-30-26;
+  }
 }
 
 .call-to-action__message {
   max-width: 458px;
   text-align: center;
-  margin-bottom: 31px;
+  margin: 0 0 31px 0;
 }
 
 .call-to-action__button {
-  max-width: 458px;
-
   @include mix.title-700-21-26;
   @include mix.button;
+  max-width: 458px;
 }

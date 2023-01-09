@@ -1,19 +1,5 @@
-.video__movie-wrapper {
-  position: relative;
-}
-
-.video__screen-img {
-  width: 100%;
-}
-
-.video__button-play {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
+.video {
+  display: grid;
+  justify-items: center;
+  padding-bottom: 40px;
 }

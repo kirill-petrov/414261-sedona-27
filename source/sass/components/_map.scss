@@ -1,0 +1,9 @@
+@use "../abstracts/vars" as *;
+
+.map iframe {
+  display: block;
+  width: 100%;
+  height: 350px;
+  border: none;
+  background-color: $color-white;
+}

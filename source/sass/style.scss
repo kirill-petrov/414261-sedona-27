@@ -1,8 +1,3 @@
-// @use "./abstracts/vars"; // не работает
-// @use "./abstracts/vars" as var;
-// @use "./abstracts/vars" as *;
-// @use "./abstracts/mixins" as mix;
-
 /* Global */
 @use "./base";
 
@@ -15,18 +10,19 @@
 @use "./components/fieldset";
 @use "./components/footer";
 @use "./components/form";
+@use "./components/gallery";
 @use "./components/hero";
 @use "./components/intro";
 @use "./components/like";
+@use "./components/map";
 @use "./components/page-header";
+@use "./components/page";
 @use "./components/photos";
+@use "./components/player";
 @use "./components/radio";
 @use "./components/services";
 @use "./components/site-nav";
 @use "./components/socials";
 @use "./components/submit-group";
-@use "./components/toggle";
 @use "./components/travel-details";
 @use "./components/video";
-@use "./components/page";
-@use "./components/gallery";

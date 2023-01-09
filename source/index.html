@@ -6,22 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
   <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/index.js"></script>
 </head>
 
 <body class="page__body">
-  <!-- todo: тут нужен общий container  -->
-
-  <header class="page__header page-header">
-    <a class="page-header__logo logo">
+  <header class="page-header">
+    <a>
       <picture>
-        <img class="logo__image" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
+        <img class="page-header__logo" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
       </picture>
     </a>
 
-    <nav class="page-header__nav">
-      <ul class="site-nav">
+    <nav class="site-nav site-nav--opened site-nav--no-js">
+      <button class="site-nav__toggle-menu" type="button" aria-label="Кнопка отображения меню">
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+      <ul class="site-nav__list">
         <li class="site-nav__item site-nav__item--current-page">
-          <!-- todo: почему не работает атрибут title? -->
           <a class="site-nav__link" title="Текущая страница">
             <span>Главная</span>
           </a>
@@ -43,8 +45,6 @@
         </li>
       </ul>
     </nav>
-    <!-- todo: JS -->
-    <input class="page-header__toggle-menu toggle" type="checkbox" aria-label="Кнопка отображения меню">
   </header>
 
   <main class="page__main">
@@ -65,14 +65,14 @@
       </section>
 
       <ol class="features__list travel-details">
+        <!-- № 1 -->
         <li class="travel-details__item feature feature--extended">
-          <!-- todo: typography-wrapper додумать -->
-          <div class="feature__text-wrapper">
-            <h3 class="feature__title feature__title--city">
+          <div class="feature__wrapper feature__wrapper--city">
+            <h3 class="feature__title">
               Настоящий городок
             </h3>
             <p class="feature__number">– №1 –</p>
-            <p class="feature__description feature__description--city">
+            <p class="feature__description">
               Седона не аттракцион для туристов, там течёт своя жизнь
             </p>
           </div>
@@ -83,45 +83,47 @@
             <img src="./img/photo-city@1x1.jpg" width="520" alt="Вид города" />
           </picture>
 
+          <!-- SERVICES -->
           <ul class="feature__services services">
             <li class="services__item">
-              <div class="feature__text-wrapper">
-                <p class="service__title">Жилье</p>
-                <p class="service__description">
-                  Рекомендуем пожить в настоящем мотеле, все как
-                  в&nbsp;кино!
-                </p>
-              </div>
+
+              <p class="services__title services__title--house">Жилье</p>
+              <p class="services__description">
+                Рекомендуем пожить в&nbsp;настоящем мотеле, все как
+                в&nbsp;кино!
+              </p>
+
             </li>
 
             <li class="services__item">
-              <div class="feature__text-wrapper">
-                <p class="service__title">Еда</p>
-                <p class="service__description">
-                  Всегда заказывайте фирменный бургер,
-                  вы&nbsp;не&nbsp;разочаруетесь!
-                </p>
-              </div>
+
+              <p class="services__title services__title--eat">Еда</p>
+              <p class="services__description">
+                Всегда заказывайте фирменный бургер,
+                вы&nbsp;не&nbsp;разочаруетесь!
+              </p>
+
             </li>
 
             <li class="services__item">
-              <div class="feature__text-wrapper">
-                <p class="service__title">Сувениры</p>
-                <p class="service__description">
-                  Не только китайского, но и местного производства!
-                </p>
-              </div>
+
+              <p class="services__title services__title--souvenirs">Сувениры</p>
+              <p class="services__description">
+                Не только китайского, но&nbsp;и&nbsp;местного производства!
+              </p>
+
             </li>
           </ul>
         </li>
 
+        <!-- № 2 -->
         <li class="travel-details__item feature feature--extended">
-          <div class="feature__text-wrapper">
-            <h3 class="feature__title feature__title--bridge">
+          <div class="feature__wrapper feature__wrapper--bridge">
+            <h3 class="feature__title">
               Там есть мост дьявола
             </h3>
             <p class="feature__number">– №2 –</p>
-            <p class="feature__description feature__description--bridge">
+            <p class="feature__description">
               Да, по нему можно пройти! Если вы осмелитесь, конечно
             </p>
           </div>
@@ -132,32 +134,33 @@
           </picture>
         </li>
 
+        <!-- № 3, 4, 5 -->
         <li class="travel-details__item feature">
-          <div class="feature__text-wrapper">
+          <div class="feature__wrapper">
             <h3 class="feature__title">Небольшая площадь</h3>
             <p class="feature__number">– №3 –</p>
-            <p class="feature__description feature__description--b-border">
+            <p class="feature__description">
               Все интересные места находятся очень близко
             </p>
           </div>
         </li>
 
         <li class="travel-details__item feature">
-          <div class="feature__text-wrapper">
+          <div class="feature__wrapper">
             <h3 class="feature__title">Красивая дорога</h3>
             <p class="feature__number">– №4 –</p>
-            <p class="feature__description feature__description--b-border">
-              Ехать в Седону из Лас-Вегаса совсем не скучно!
+            <p class="feature__description">
+              Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!
             </p>
           </div>
         </li>
 
         <li class="travel-details__item feature">
-          <div class="feature__text-wrapper">
+          <div class="feature__wrapper">
             <h3 class="feature__title">Мало туристов</h3>
             <p class="feature__number">– №5 –</p>
             <p class="feature__description">
-              Большинство едет в Гранд Каньон и толпится там
+              Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там
             </p>
           </div>
         </li>
@@ -176,7 +179,7 @@
     </section>
 
     <picture class="map">
-      <img src="./img/map-tablet.jpg" alt="Карта" />
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d104352.44293816897!2d-111.607959!3d35.18120755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sru!4v1672206515989!5m2!1sru!2sru" title="Карта" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </picture>
   </main>
 
@@ -215,12 +218,14 @@
       </li>
     </ul>
 
-    <a class="footer__created created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="На страницу курса Адаптивная вёрстка и автоматизация">
-      <p class="created__text">Разработано</p>
-      <svg class="created__logo" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
-        <path d="M13.5 0.000430316L0 1.41584V26.16L13.5 34.1928L27 26.16V1.41584L13.6416 0.0146318L13.5 0V0.000430316ZM25.2343 25.156L13.5 32.1379L1.76572 25.156V15.014L13.4501 21.9679L13.4694 23.2276L5.45379 18.4576L5.44217 19.6811L13.4892 24.5173L13.5099 25.8114L5.46498 21.0251L5.45336 22.2485L13.5004 27.0848L21.6245 22.224V20.9949L21.6142 21.001V17.0047L25.2339 14.8431V25.156H25.2343ZM25.2244 13.5271L22.014 15.4193L20.5323 16.293L13.4651 12.088L13.4531 13.3115L19.4939 16.9036L19.4405 16.9346L19.3106 17.0125L18.4516 17.5177L13.4651 14.55L13.4535 15.7735L17.3903 18.1146L16.4612 18.7356L16.4388 18.7498L13.4651 16.9974L13.4535 18.2205L15.4043 19.3695L13.4165 20.5624L1.7924 13.6528L13.4337 6.65489V6.65661L25.2252 13.5275L25.2244 13.5271ZM25.2339 12.2963L13.4376 5.34147V5.33975L13.4359 5.34104L13.4342 5.34018V5.34147L1.76658 12.2894V3.00598L13.5009 1.77604L25.2343 3.00598V12.2963H25.2339Z" />
-      </svg>
-    </a>
+    <div class="footer__created">
+      <a class="created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу курса Адаптивная вёрстка и автоматизация">
+        <span class="created__text">Разработано</span>
+        <svg class="created__logo" width="27" height="35" viewBox="0 0 27 35" fill="black" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13.5 0.000430316L0 1.41584V26.16L13.5 34.1928L27 26.16V1.41584L13.6416 0.0146318L13.5 0V0.000430316ZM25.2343 25.156L13.5 32.1379L1.76572 25.156V15.014L13.4501 21.9679L13.4694 23.2276L5.45379 18.4576L5.44217 19.6811L13.4892 24.5173L13.5099 25.8114L5.46498 21.0251L5.45336 22.2485L13.5004 27.0848L21.6245 22.224V20.9949L21.6142 21.001V17.0047L25.2339 14.8431V25.156H25.2343ZM25.2244 13.5271L22.014 15.4193L20.5323 16.293L13.4651 12.088L13.4531 13.3115L19.4939 16.9036L19.4405 16.9346L19.3106 17.0125L18.4516 17.5177L13.4651 14.55L13.4535 15.7735L17.3903 18.1146L16.4612 18.7356L16.4388 18.7498L13.4651 16.9974L13.4535 18.2205L15.4043 19.3695L13.4165 20.5624L1.7924 13.6528L13.4337 6.65489V6.65661L25.2252 13.5275L25.2244 13.5271ZM25.2339 12.2963L13.4376 5.34147V5.33975L13.4359 5.34104L13.4342 5.34018V5.34147L1.76658 12.2894V3.00598L13.5009 1.77604L25.2343 3.00598V12.2963H25.2339Z" />
+        </svg>
+      </a>
+    </div>
   </footer>
 
 </body>

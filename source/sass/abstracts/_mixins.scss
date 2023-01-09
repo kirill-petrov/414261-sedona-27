@@ -1,4 +1,4 @@
-@use "./vars" as var;
+@use "./vars" as *;
 
 @mixin list-reset {
   margin: 0;
@@ -57,18 +57,18 @@
   margin: 0;
   padding: 0;
   text-transform: uppercase;
-  color: var.$color-text-white;
-  background-color: var.$color-bg-primary;
+  color: $color-white;
+  background-color: $color-primary;
 
   border: none;
   outline: none;
 
   &:hover {
-    background-color: var.$color-bg-primary-hover;
+    background-color: $color-primary-hover;
   }
 
   &:active {
     color: #87b6d1;
-    background-color: var.$color-bg-primary-active;
+    background-color: $color-primary-active;
   }
 }
