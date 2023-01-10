@@ -1,15 +1,35 @@
-@use "../abstracts/vars" as var;
+@use "../abstracts/vars" as *;
 
 .hero {
   position: relative;
-  width: 100%;
-  background-image: url("../img/hero-back-mobile.jpg");
+  height: 158px;
+  background-image: url("../img/hero-bg-tablet.jpg");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-color: $color-white;
   overflow-x: hidden;
 
-  &::before {
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/hero-bg-tablet@2x.jpg");
+    // background-size: 1536px auto; // todo: зачем задаём background-size?
+  }
+
+  @media (min-width: $screen-tablet) {
+    height: 290px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    height: 301px;
+    background-image: url("../img/hero-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/hero-bg-desktop@2x.jpg");
+      // background-size: 2400px auto;
+    }
+  }
+
+  &::after {
     position: absolute;
     content: "";
     bottom: 0;
@@ -23,16 +43,34 @@
   }
 
   &--main {
-    min-height: 290px;
+    height: 389px;
+
+    @media (min-width: $screen-tablet) {
+      height: 518px;
+    }
   }
 }
 
 .hero__title {
   margin: 0 auto;
-  padding: 52px 0 67px;
+  padding-top: 52px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 95px;
+    width: 457px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 101px;
+  }
 
   &--main {
-    padding: 90px 0;
-    height: auto;
+    padding-top: 90px;
+    width: 282px;
+
+    @media (min-width: $screen-tablet) {
+      padding-top: 77px;
+      width: 460px;
+    }
   }
 }
