@@ -1,0 +1,9 @@
+@use "../abstracts/vars" as *;
+
+.feedback {
+  background-color: $color-white;
+}
+
+.feedback__intro {
+  margin: 0 auto;
+}
