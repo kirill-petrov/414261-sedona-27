@@ -49,9 +49,17 @@
 }
 
 .feature__image img {
-  height: 160px;
+  height: 260px;
+  object-fit: cover;
 
-  @media (min-width: $screen-tablet) {
+
+  @media (min-width: 321px) {
+    width: 512px;
+    height: 256px;
+  }
+
+  @media (min-width: 513px) {
+    width: 800px;
     height: 256px;
   }
 }
