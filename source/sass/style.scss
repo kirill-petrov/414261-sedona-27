@@ -2,11 +2,13 @@
 @use "./base";
 
 /* Components */
+@use "./components/advantages";
 @use "./components/call-to-action";
 @use "./components/checkbox";
 @use "./components/container";
 @use "./components/created";
 @use "./components/feature";
+@use "./components/feedback";
 @use "./components/fieldset";
 @use "./components/footer";
 @use "./components/form";

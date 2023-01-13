@@ -5,8 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <script defer src="js/index.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./js/index.js"></script>
 </head>
 
 <body class="page__body">
@@ -49,22 +53,23 @@
 
   <main class="page__main">
     <div class="hero hero--main">
-      <img class="hero__title hero__title--main" src="./img/hero-welcome.svg" width="282" alt="Приветсвенный текст" />
+      <img class="hero__title hero__title--main" src="./img/hero-title-main.svg" width="282" height="214" alt="Надпись - Добро пожаловать в великолепную Седону" />
     </div>
 
-    <section class="features">
+    <section class="advantages">
       <h1 class="visually-hidden">Добро пожаловать в великолепную Седону</h1>
 
-      <section class="features__intro intro intro--main ">
-        <h2 class="intro__title intro__title--main">
-          Седона – небольшой городок в аризоне, заслуживающий большего!
+      <!-- todo: доработать -->
+      <section class="advantages__intro intro">
+        <h2 class="intro__title">
+          Седона&nbsp;&mdash; небольшой городок в&nbsp;аризоне, заслуживающий большего!
         </h2>
         <p class="intro__message">
-          Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+          Рассмотрим 5&nbsp;причин, по&nbsp;которым Седона круче, чем Гранд Каньон!
         </p>
       </section>
 
-      <ol class="features__list travel-details">
+      <ol class="advantages__list travel-details">
         <!-- № 1 -->
         <li class="travel-details__item feature feature--extended">
           <div class="feature__wrapper feature__wrapper--city">
@@ -78,40 +83,32 @@
           </div>
 
           <picture class="feature__image">
-            <!-- <source media="(min-width: 1200px)" /> -->
-            <!-- <source media="(min-width: 768px)" /> -->
-            <img src="./img/photo-city@1x1.jpg" width="520" alt="Вид города" />
+            <source media="(min-width: 513px)" srcset="./img/photo-city-800.jpg, ./img/photo-city-800-2x.jpg 2x">
+            <source media="(min-width: 321px)" srcset="./img/photo-city-512.jpg, ./img/photo-city-512-2x.jpg 2x">
+            <img src="./img/photo-city-320.jpg" width="320" height="260" srcset="./img/photo-city-320-2x.jpg 2x" alt="Вид города" />
           </picture>
 
           <!-- SERVICES -->
           <ul class="feature__services services">
             <li class="services__item">
-
               <p class="services__title services__title--house">Жилье</p>
               <p class="services__description">
-                Рекомендуем пожить в&nbsp;настоящем мотеле, все как
-                в&nbsp;кино!
+                Рекомендуем пожить в&nbsp;настоящем мотеле, все как в&nbsp;кино!
               </p>
-
             </li>
 
             <li class="services__item">
-
               <p class="services__title services__title--eat">Еда</p>
               <p class="services__description">
-                Всегда заказывайте фирменный бургер,
-                вы&nbsp;не&nbsp;разочаруетесь!
+                Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!
               </p>
-
             </li>
 
             <li class="services__item">
-
               <p class="services__title services__title--souvenirs">Сувениры</p>
               <p class="services__description">
                 Не только китайского, но&nbsp;и&nbsp;местного производства!
               </p>
-
             </li>
           </ul>
         </li>
@@ -127,10 +124,11 @@
               Да, по нему можно пройти! Если вы осмелитесь, конечно
             </p>
           </div>
+
           <picture class="feature__image">
-            <!-- <source media="(min-width: 1200px)" /> -->
-            <!-- <source media="(min-width: 768px)" /> -->
-            <img src="./img/photo-bridge@1x1.jpg" width="520" alt="Мост Дьявола" />
+            <source media="(min-width: 512px)" srcset="./img/photo-bridge-800.jpg, ./img/photo-bridge-800-2x.jpg 2x">
+            <source media="(min-width: 321px)" srcset="./img/photo-bridge-512.jpg, ./img/photo-bridge-512-2x.jpg 2x">
+            <img src="./img/photo-bridge-320.jpg" width="320" height="260" srcset="./img/photo-bridge-320-2x.jpg 2x" alt="Мост Дьявола" />
           </picture>
         </li>
 

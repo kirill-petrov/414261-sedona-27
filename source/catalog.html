@@ -5,8 +5,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="js/index.js"></script>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.css" />
+  <script defer src="./js/index.js"></script>
 </head>
 
 <body class="page__body">
@@ -50,14 +54,14 @@
   <main class="page__main">
 
     <div class="hero">
-      <img class="hero__title" src="/img/hero-sedona.svg" alt="Заголовок — Седона" />
+      <img class="hero__title" src="./img/hero-title.svg" width="229" height="39" alt="Надпись — Седона" />
     </div>
 
     <section class="gallery">
       <h1 class="visually-hidden">Галерея с фото и видео</h1>
 
       <section class="gallery__intro intro intro--photos">
-        <h2 class="intro__title">Фото и видео</h2>
+        <h2 class="intro__title intro__title--font-bigger">Фото и видео</h2>
         <p class="intro__message">
           Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии&nbsp;помогут
           вам забыть о&nbsp;политике и&nbsp;экономике.
@@ -70,8 +74,11 @@
         <ul class="photos">
           <li class="photos__item">
             <picture>
-              <img class="photos__image" src="./img/photo-1-mobile.jpg" alt="Неродные просторы" />
+              <source media="(min-width: 769px)" srcset="./img/photo-1-1200.jpg, ./img/photo-1-1200-2x.jpg 2x">
+              <source media="(min-width: 321px)" srcset="./img/photo-1-648.jpg, ./img/photo-1-648-2x.jpg 2x">
+              <img class="photos__image photos__image--main" src="./img/photo-1-280.jpg" width="280" height="280" srcset="./img/photo-1-280-2x.jpg 2x" alt="Неродные просторы" />
             </picture>
+
             <div class="photos__info">
               <h2 class="photos__title">Неродные просторы</h2>
               <p class="photos__author">Автор фото: Борис</p>
@@ -85,10 +92,8 @@
           </li>
 
           <li class="photos__item">
-            <picture>
+            <img class="photos__image" src="./img/photo-2-400.jpg" width="280" height="280" srcset="./img/photo-2-400-2x.jpg 2x" alt="Местная растительность" />
 
-              <img class="photos__image" src="./img/photo-2-mobile.jpg" alt="Местная растительность" />
-            </picture>
             <div class="photos__info">
               <h2 class="photos__title">Местная растительность</h2>
               <p class="photos__author">Автор фото: Сергей</p>
@@ -102,10 +107,8 @@
           </li>
 
           <li class="photos__item">
-            <picture>
+            <img class="photos__image" src="./img/photo-3-400.jpg" width="280" height="280" srcset="./img/photo-3-400-2x.jpg 2x" alt="Дорога на север" />
 
-              <img class="photos__image" src="./img/photo-3-mobile.jpg" alt="Дорога на север" />
-            </picture>
             <div class="photos__info">
               <h2 class="photos__title">Дорога на север</h2>
               <p class="photos__author">Автор фото: Пётр</p>
@@ -119,10 +122,8 @@
           </li>
 
           <li class="photos__item">
-            <picture>
+            <img class="photos__image" src="./img/photo-4-400.jpg" width="280" height="280" srcset="./img/photo-4-400-2x.jpg 2x" alt="Мост дьявола" />
 
-              <img class="photos__image" src="./img/photo-4-mobile.jpg" alt="Мост Дьявола" />
-            </picture>
             <div class="photos__info">
               <h2 class="photos__title">Мост Дьявола</h2>
               <p class="photos__author">Автор фото: Антон</p>
@@ -154,7 +155,7 @@
             </button>
 
             <div class="player__container">
-              <video poster="../img/video-poster.jpg">
+              <video poster="./img/video-poster.jpg">
                 Your browser doesn't support HTML5 video tag.
               </video>
             </div>
