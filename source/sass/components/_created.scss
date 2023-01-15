@@ -7,6 +7,7 @@
   align-items: center;
   color: $color-black;
   text-transform: uppercase;
+  transition: 0.2s ease-out 0s;
 
   @media (min-width: $screen-tablet) {
     justify-content: flex-end;
@@ -14,21 +15,13 @@
 
   &:hover {
     color: $color-primary;
-    fill: $color-primary;
   }
 
   &:active {
     color: $color-logo-active;
-    fill: $color-logo-active;
   }
 }
 
 .created__text {
   margin-right: 13px;
-}
-
-.created__logo {
-  width: 27px;
-  height: 35px;
-  fill: inherit;
 }

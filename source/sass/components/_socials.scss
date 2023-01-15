@@ -13,90 +13,20 @@
 }
 
 .socials__link {
-  position: relative;
-  display: block;
+  display: grid;
+  place-content: center;
   width: 48px;
   height: 48px;
+  color: $color-white;
   background-color: $color-primary;
+  transition: 0.2s ease-out 0s;
 
   &:hover {
     background-color: $color-primary-hover;
   }
 
   &:active {
+    color: #87b6d1;
     background-color: $color-primary-active;
-  }
-
-  // todo: см 7. Векторная графика и оптимизация
-  // todo: 1. Как подсветить SVG
-  // "вставив в разметку через fill к родителю"
-  &::before {
-    position: absolute;
-    content: "";
-    // margin: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  &--vk::before {
-    width: 24px;
-    height: 24px;
-    background-image: url("../img/vk.svg");
-    // "через свг в разметку"
-  }
-
-  // &--vk:hover::before {
-  // mask-repeat: no-repeat;
-  // mask-position: center center;
-  // mask-size: 100% auto;
-  // mask-image: url("../img/vk.svg");
-  // fill: url("../img/tg.svg");
-  // mask-composite: exclude;
-  // fill: green;
-  // background-color: red;
-  // }
-}
-
-// todo: 2.
-.socials__link--tg {
-  position: relative;
-  display: block;
-
-  width: 48px;
-  height: 48px;
-  background-color: $color-primary;
-
-  &:hover {
-    background-color: $color-primary-hover;
-  }
-
-  &:active {
-    background-color: $color-primary-active;
-  }
-}
-
-.socials__link-telega {
-  // display: block;
-  width: 22px;
-  height: 18px;
-  // fill: green;
-  // color: tomato;
-
-  &:hover {
-    // fill: blue;
-  }
-}
-
-// todo: 3. Как подсветить SVG при наведении на .socials__link--yt
-.test-svg {
-  width: 20px;
-  height: 14px;
-  // background-color: aquamarine;
-  mask-image: url("../img/yt.svg");
-
-  &:hover {
-    // background-color: red;
   }
 }
