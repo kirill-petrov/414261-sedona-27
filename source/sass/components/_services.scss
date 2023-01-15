@@ -43,19 +43,19 @@
   }
 
   &--house::before {
-    background: url("../img/services-house.svg");
+    background: url("../img/sprite.svg#house-v");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   &--eat::before {
-    background: url("../img/services-house.svg");
+    background: url("../img/sprite.svg#burger-v");
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   &--souvenirs::before {
-    background: url("../img/services-house.svg");
+    background: url("../img/sprite.svg#present-v");
     background-size: cover;
     background-repeat: no-repeat;
   }
