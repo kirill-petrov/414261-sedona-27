@@ -17,8 +17,8 @@
   place-content: center;
   width: 48px;
   height: 48px;
-  background-color: $color-primary;
   color: $color-white;
+  background-color: $color-primary;
   transition: 0.2s ease-out 0s;
 
   &:hover {
@@ -26,7 +26,7 @@
   }
 
   &:active {
-    background-color: $color-primary-active;
     color: #87b6d1;
+    background-color: $color-primary-active;
   }
 }
