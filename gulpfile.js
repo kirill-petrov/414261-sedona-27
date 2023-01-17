@@ -31,6 +31,12 @@ const html = () => {
   return gulp.src("source/*.html").pipe(gulp.dest("build"));
 };
 
+// Webmanifest
+
+const manifest = () => {
+  return gulp.src("source/*.webmanifest").pipe(gulp.dest("build"));
+};
+
 // Scripts
 
 const scripts = () => {
@@ -70,7 +76,7 @@ const createWebp = () => {
 
 const svg = () =>
   gulp
-    .src(["source/img/*.svg", "!source/img/icons/*.svg"])
+    .src(["source/img/*.svg"])
     .pipe(svgo())
     .pipe(gulp.dest("build/img"));
 
@@ -139,7 +145,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(styles, html, scripts, svg, sprite, createWebp)
+  gulp.parallel(manifest, styles, html, scripts, svg, sprite, createWebp)
 );
 
 // Default
@@ -148,6 +154,6 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
-  gulp.parallel(styles, html, scripts, svg, sprite, createWebp),
+  gulp.parallel(manifest, styles, html, scripts, svg, sprite, createWebp),
   gulp.series(server, watcher)
 );
