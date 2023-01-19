@@ -47,7 +47,8 @@
   }
 
   &:focus {
-    border: 4px solid $color-bg-grey-2;
+    outline: 4px solid $color-bg-grey-2;
+    outline-offset: -4px;
     background-color: $color-white;
   }
 }
