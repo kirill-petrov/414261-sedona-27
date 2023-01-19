@@ -6,8 +6,8 @@
   grid-template-columns: auto;
   grid-template-rows: 21px 58px;
   grid-template-areas:
-      "label"
-      "input";
+    "label"
+    "input";
 
   &--group {
     grid-template-columns: auto 58px;
