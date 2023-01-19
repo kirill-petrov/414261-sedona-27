@@ -1,7 +1,9 @@
 /* fonts */
+
 $main-font: "PT Sans", "Arial", sans-serif;
 
 /* colors */
+
 $color-black: #000000;
 $color-white: #ffffff;
 $color-primary: #81b3d2;
@@ -11,11 +13,10 @@ $color-primary-active: #5496bd;
 $color-text-basic: #333333;
 $color-text-active: #b2b2b2;
 $color-text-current-page: #766357;
-$color-text-helper: #858585; // на стр формы под кнопкой в одном месте
 $color-text-placholder: #a9a9a9;
 
-$color-bg-lightgrey: #eeeeee; //?
 $color-bg-grey: #f2f2f2;
+$color-bg-grey-2: #e6e6e6;
 
 $post-border: #e5e5e5;
 
@@ -27,6 +28,7 @@ $menu-close-hover: #cde1ed;
 $menu-close-active: #a7cae0;
 
 /* media queries */
+
 $screen-mobile: 767px;
 $screen-tablet: 768px;
 $screen-desktop: 1200px;

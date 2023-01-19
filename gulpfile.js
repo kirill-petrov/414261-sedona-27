@@ -5,7 +5,6 @@ import postcss from "gulp-postcss";
 import autoprefixer from "autoprefixer";
 import csso from "postcss-csso";
 import rename from "gulp-rename";
-// import terser from "gulp-terser";
 import squoosh from "gulp-libsquoosh";
 import svgo from "gulp-svgmin";
 import svgstore from "gulp-svgstore";
@@ -76,9 +75,13 @@ const createWebp = () => {
 
 const svg = () =>
   gulp
-    .src(["source/img/*.svg"])
+    .src(["source/img/*.svg", "!source/img/tick.svg"])
     .pipe(svgo())
     .pipe(gulp.dest("build/img"));
+
+const customSVG = () => {
+  return gulp.src("source/img/tick.svg").pipe(gulp.dest("build/img"));
+};
 
 const sprite = () => {
   return gulp
@@ -145,7 +148,7 @@ export const build = gulp.series(
   clean,
   copy,
   optimizeImages,
-  gulp.parallel(manifest, styles, html, scripts, svg, sprite, createWebp)
+  gulp.parallel(manifest, styles, html, scripts, svg, customSVG, sprite, createWebp)
 );
 
 // Default
@@ -154,6 +157,6 @@ export default gulp.series(
   clean,
   copy,
   copyImages,
-  gulp.parallel(manifest, styles, html, scripts, svg, sprite, createWebp),
+  gulp.parallel(manifest, styles, html, scripts, svg, customSVG, sprite, createWebp),
   gulp.series(server, watcher)
 );

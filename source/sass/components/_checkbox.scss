@@ -14,6 +14,15 @@
     margin-bottom: 16px;
   }
 
+  &:active .checkbox__input {
+    background-color: #d5d5d5;
+
+    &:checked::before {
+      background-image: url("../img/tick.svg#active");
+      background-repeat: no-repeat;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     &:last-child {
       margin-bottom: 16px;
@@ -43,20 +52,15 @@
     transform: translate(-50%, -50%) scale(0);
     width: 22px;
     height: 16px;
-    background-image: url("../img/tick.svg");
-    background-size: contain;
+    background-image: url("../img/tick.svg#base");
     background-repeat: no-repeat;
   }
 
   &:checked::before {
     transform: translate(-50%, -50%) scale(1);
   }
-}
 
-/*
-  todo:
-  Д7. Все состояния элементов (смотрите стайлгайд) прописаны в стилевом файле.
-  В соответствии со стайлгайдом, который присутствует в каждом проекте, все указанные в нём элементы должны иметь соответствующие эффекты при наведении и нажатии.
-  Должны присутствовать все активные состояния, а для чекбоксов и радиокнопок прописаны состояния disabled.
-  Если в стайлгайде не предусмотрено какое-то состояние, то его реализация остаётся на усмотрение студента.
- */
+  &:hover {
+    background-color: $color-bg-grey-2;
+  }
+}
