@@ -30,20 +30,17 @@
       width: 23px;
       height: 4px;
       background-color: $color-primary;
-      box-shadow: 0 9px 0 0 $color-primary,
-        0 18px 0 0 $color-primary;
+      box-shadow: 0 9px 0 0 $color-primary, 0 18px 0 0 $color-primary;
     }
 
     &:hover::before {
       background-color: $menu-burger-hover;
-      box-shadow: 0 9px 0 0 $menu-burger-hover,
-        0 18px 0 0 $menu-burger-hover;
+      box-shadow: 0 9px 0 0 $menu-burger-hover, 0 18px 0 0 $menu-burger-hover;
     }
 
     &:active::before {
       background-color: $menu-burger-active;
-      box-shadow: 0 9px 0 0 $menu-burger-active,
-        0 18px 0 0 $menu-burger-active;
+      box-shadow: 0 9px 0 0 $menu-burger-active, 0 18px 0 0 $menu-burger-active;
     }
   }
 }
@@ -138,6 +135,7 @@
 
   &:hover {
     background-color: $color-primary-hover;
+    transition: 0.2s ease-out 0s;
   }
 
   &:active {

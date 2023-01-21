@@ -106,78 +106,34 @@
   }
 }
 
-.fieldset__field {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-
-  &:not(:last-child) {
-    margin-bottom: 16px;
-  }
-
-  &--phone {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-      width: 58px;
-      height: 58px;
-      background-image: url("../img/icon-phone.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #e6e6e6;
-    }
-  }
-
-  &--email {
-    &::after {
-      position: absolute;
-      content: "";
-      bottom: 0;
-      right: 0;
-      z-index: 1;
-      width: 58px;
-      height: 58px;
-      background-image: url("../img/icon-email.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      background-color: #e6e6e6;
-    }
-  }
-}
-
-.fieldset__label {
-  padding-left: 16px;
-}
-
-.fieldset__input {
-  width: 100%;
-  padding: 16px;
-
+.fieldset__textarea {
   @include mix.title-700-18-26;
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  margin-bottom: 56px;
+  padding: 16px;
   color: $color-black;
+  background-color: $color-bg-grey;
   border: none;
   outline: none;
-  background-color: $color-bg-grey;
   overflow: hidden;
   text-overflow: ellipsis;
+  resize: vertical;
 
   &::placeholder {
     color: $color-text-placholder;
   }
 
-  &--increased-padding {
-    padding-right: 16px + 58px;
+  &:hover {
+    background-color: $color-bg-grey-2;
   }
-}
 
-.fieldset__textarea {
-  display: block;
-  min-height: 150px;
-  margin-bottom: 56px;
-  resize: vertical;
+  &:focus {
+    outline: 4px solid $color-bg-grey-2;
+    outline-offset: -4px;
+    background-color: $color-white;
+  }
 
   @media (min-width: $screen-tablet) {
     margin-bottom: 48px;

@@ -3,7 +3,8 @@
 .hero {
   position: relative;
   height: 158px;
-  background-image: url("../img/hero-bg-tablet.jpg");
+  // todo: переделать с check-webp.js
+  background-image: url("../img/hero-bg-tablet.webp");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -11,8 +12,7 @@
   overflow-x: hidden;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../img/hero-bg-tablet@2x.jpg");
-    // background-size: 1536px auto; // todo: зачем задаём background-size?
+    background-image: url("../img/hero-bg-tablet@2x.webp");
   }
 
   @media (min-width: $screen-tablet) {
@@ -21,11 +21,10 @@
 
   @media (min-width: $screen-desktop) {
     height: 301px;
-    background-image: url("../img/hero-bg-desktop.jpg");
+    background-image: url("../img/hero-bg-desktop.webp");
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/hero-bg-desktop@2x.jpg");
-      // background-size: 2400px auto;
+      background-image: url("../img/hero-bg-desktop@2x.webp");
     }
   }
 

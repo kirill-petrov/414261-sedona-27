@@ -1,0 +1,62 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/vars" as *;
+
+.input-field {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 21px 58px;
+  grid-template-areas:
+    "label"
+    "input";
+
+  &--group {
+    grid-template-columns: auto 58px;
+    grid-template-areas:
+      "label label"
+      "input icon";
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+}
+
+.input-field__label {
+  grid-area: label;
+  padding-left: 16px;
+}
+
+.input-field__input {
+  grid-area: input;
+  padding: 16px;
+
+  @include mix.title-700-18-26;
+  color: $color-black;
+  border: none;
+  outline: none;
+  background-color: $color-bg-grey;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  &::placeholder {
+    color: $color-text-placholder;
+  }
+
+  &:hover {
+    background-color: $color-bg-grey-2;
+  }
+
+  &:focus {
+    outline: 4px solid $color-bg-grey-2;
+    outline-offset: -4px;
+    background-color: $color-white;
+  }
+}
+
+.input-field__icon {
+  grid-area: icon;
+  display: grid;
+  place-content: center;
+  color: #010101;
+  background-color: $color-bg-grey-2;
+}

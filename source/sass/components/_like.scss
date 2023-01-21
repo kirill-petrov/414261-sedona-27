@@ -15,10 +15,10 @@
   margin: 0;
   margin-right: 14px;
   padding: 0;
-  fill: #a4a4a4;
+  color: #a4a4a4;
 
   @media (min-width: $screen-desktop) {
-    fill: $color-white;
+    color: $color-white;
   }
 }
 
