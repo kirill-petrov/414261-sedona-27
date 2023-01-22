@@ -11,6 +11,10 @@
     color: $color-white;
   }
 
+  &:last-child {
+    padding: 0 0 5px;
+  }
+
   @media (min-width: $screen-tablet) {
     &:nth-child(1) {
       display: grid;
@@ -51,7 +55,6 @@
 .feature__image img {
   height: 260px;
   object-fit: cover;
-
 
   @media (min-width: 321px) {
     width: 512px;
@@ -108,4 +111,9 @@
 
 .feature__description {
   margin: 0;
+  padding: 0 15px;
+
+  &--extended {
+    padding: 0 5px;
+  }
 }
