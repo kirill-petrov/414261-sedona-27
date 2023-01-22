@@ -11,7 +11,7 @@
 
   @media (min-width: $screen-tablet) {
     width: 520px;
-    padding: 48px 0 56px;
+    padding: 48px 0 55px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -45,16 +45,10 @@
   }
 
   &--feedback {
-    // todo: pixel-perfect
     padding: 36px 0 28px;
 
     @media (min-width: $screen-tablet) {
-      // max-width: 445px;
       padding: 64px 0 102px;
-    }
-
-    @media (min-width: $screen-desktop) {
-      // padding: 62px 0 88px;
     }
   }
 }
@@ -68,6 +62,7 @@
   @media (min-width: $screen-tablet) {
     @include mix.title-700-21-26;
     width: 100%;
+    margin: 0 0 30px;
   }
 
   &--font-bigger {

@@ -7,6 +7,10 @@
   @include mix.title-700-18-26;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $screen-tablet) {
+    @include mix.title-700-14-21;
+  }
 }
 
 .site-nav__toggle-menu {

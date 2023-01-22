@@ -70,8 +70,8 @@
 .feature__wrapper {
   display: flex;
   flex-direction: column;
-  margin: 0 18px;
-  padding: 24px 0;
+  align-items: center;
+  padding: 24px 18px;
 
   &--city {
     padding-top: 70px;
@@ -85,6 +85,10 @@
 
   @media (min-width: $screen-tablet) {
     padding-top: 52px;
+
+    &--middle {
+      padding: 41px 30px 0;
+    }
   }
 }
 
@@ -102,11 +106,17 @@
 
   @media (min-width: $screen-tablet) {
     @include mix.title-700-21-26;
+    width: 150px;
+    margin-bottom: 14px;
   }
 }
 
 .feature__number {
   margin: 0 0 17px 0;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 22px;
+  }
 }
 
 .feature__description {
@@ -115,5 +125,9 @@
 
   &--extended {
     padding: 0 5px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    padding: 0 15px;
   }
 }
