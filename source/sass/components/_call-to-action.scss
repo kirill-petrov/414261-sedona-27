@@ -32,6 +32,10 @@
   @media (min-width: $screen-tablet) {
     margin: 0 0 41px;
   }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0 0 45px;
+  }
 }
 
 .call-to-action__break {
@@ -46,4 +50,8 @@
   @include mix.title-700-21-26;
   @include mix.button;
   max-width: 458px;
+
+  @media (min-width: $screen-desktop) {
+    margin: 0 0 8px;
+  }
 }
