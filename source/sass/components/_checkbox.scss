@@ -30,7 +30,15 @@
   }
 
   @media (min-width: $screen-desktop) {
-    margin-bottom: 0;
+    justify-content: center;
+
+    &:nth-last-child(2) {
+      margin-left: -10px;
+    }
+
+    &:last-child {
+      margin-left: -12px;
+    }
   }
 }
 

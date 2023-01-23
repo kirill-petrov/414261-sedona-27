@@ -12,6 +12,10 @@
     padding: 29px 0 23px;
   }
 
+  &--feedback {
+    padding: 52px 0 22px;
+  }
+
   @media (min-width: $screen-tablet) {
     flex-direction: row;
     padding: 36px 0;
@@ -65,12 +69,20 @@
     &--catalog {
       padding: 0 60px 0 0;
     }
+
+    &--feedback {
+      padding: 0 60px 0 0;
+    }
   }
 
   @media (min-width: $screen-desktop) {
     padding-right: 136px;
 
     &--catalog {
+      padding: 0 120px 0 0;
+    }
+
+    &--feedback {
       padding: 0 120px 0 0;
     }
   }

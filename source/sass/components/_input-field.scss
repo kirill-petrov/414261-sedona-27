@@ -51,6 +51,12 @@
     outline-offset: -4px;
     background-color: $color-white;
   }
+
+  @media (min-width: $screen-desktop) {
+    &--person {
+      width: 430px;
+    }
+  }
 }
 
 .input-field__icon {

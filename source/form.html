@@ -62,29 +62,32 @@
       <h1 class="visually-hidden">Форма для отзыва</h1>
 
       <section class="feedback__intro intro intro--feedback">
-        <h2 class="intro__title intro__title--font-bigger">Оставьте свой отзыв</h2>
-        <p class="intro__message">
-          Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях
+        <h2 class="intro__title intro__title--feedback intro__title--font-bigger">Оставьте свой отзыв</h2>
+        <p class="intro__message intro__message--feedback">
+          Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них,<br class="intro__break"> а&nbsp;также о посещенных вами достопримечательностях
         </p>
       </section>
 
       <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+
+        <!-- PERSON -->
+
         <fieldset class="form__fieldset fieldset">
-          <h2 class="fieldset__title">Представьтесь</h2>
+          <h2 class="fieldset__title">Представьтесь:</h2>
 
           <label class="input-field">
             <span class="input-field__label">Имя<sup>*</sup>:</span>
-            <input class="input-field__input" type="text" name="guest-name" placeholder="Введите имя" required />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-name" placeholder="Введите имя" required value="Пётр"/>
           </label>
 
           <label class="input-field">
             <span class="input-field__label">Фамилия<sup>*</sup>:</span>
-            <input class="input-field__input" type="text" name="guest-surname" placeholder="Введите фамилию" required />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-surname" placeholder="Введите фамилию" required />
           </label>
 
           <label class="input-field">
             <span class="input-field__label">Отчество:</span>
-            <input class="input-field__input" type="text" name="guest-patronymic" placeholder="Введите отчество" />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-patronymic" placeholder="Введите отчество" />
           </label>
         </fieldset>
 
@@ -127,12 +130,12 @@
 
           <label class="fieldset__field-radio radio">
             <input class="radio__input" type="radio" name="point" value="good" checked />
-            <span>Скорее положительные</span>
+            <span>Скорее положительное</span>
           </label>
 
           <label class="fieldset__field-radio radio">
             <input class="radio__input" type="radio" name="point" value="bad" />
-            <span>Скорее отрицательные</span>
+            <span>Скорее отрицательное</span>
           </label>
 
           <label class="fieldset__field-radio radio">
@@ -143,19 +146,19 @@
 
         <!-- CHECKBOX -->
 
-        <fieldset class="form__fieldset fieldset">
+        <fieldset class="form__fieldset fieldset fieldset--checkbox">
           <h2 class="fieldset__title">Посещенные достопримечательности:</h2>
 
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="bridge" />
+            <input class="checkbox__input" type="checkbox" name="bridge" checked />
             <span>Мост Дьявола</span>
           </label>
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="bell" />
+            <input class="checkbox__input" type="checkbox" name="bell" checked />
             <span>Гора-Колокол</span>
           </label>
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="slide-park" />
+            <input class="checkbox__input" type="checkbox" name="slide-park" checked />
             <span>Слайд-парк</span>
           </label>
           <label class="checkbox">
@@ -182,7 +185,7 @@
     </section>
   </main>
 
-  <footer class="page__footer footer">
+  <footer class="page__footer footer footer--feedback">
     <h2 class="visually-hidden">Социальный сети</h2>
 
     <p class="footer__hashtag">#visitsedona</p>
@@ -216,7 +219,7 @@
       </li>
     </ul>
 
-    <div class="footer__created">
+    <div class="footer__created footer__created--feedback">
       <a class="created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMl Academy">
         <span class="created__text">Разработано</span>
 
