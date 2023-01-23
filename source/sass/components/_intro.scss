@@ -19,24 +19,23 @@
   }
 
   &--photos {
-    padding: 37px 0 25px;
+    padding: 37px 0 38px;
 
     @media (min-width: $screen-tablet) {
       width: 460px;
-      padding: 67px 0 87px;
+      padding: 67px 0 82px;
     }
 
     @media (min-width: $screen-desktop) {
-      padding: 105px 0 89px;
+      padding: 98px 0 89px;
     }
   }
 
   &--video {
-    padding: 17px 0 38px;
+    padding: 16px 0 39px;
 
     @media (min-width: $screen-tablet) {
-      max-width: 445px;
-      padding: 63px 0 90px;
+      padding: 56px 0 90px;
     }
 
     @media (min-width: $screen-desktop) {
@@ -59,10 +58,23 @@
   margin: 0 0 35px;
   color: $color-black;
 
+  &--photos {
+    margin: 0 0 25px;
+  }
+
+  &--video {
+    margin: 0 0 28px;
+  }
+
   @media (min-width: $screen-tablet) {
     @include mix.title-700-21-26;
     width: 100%;
     margin: 0 0 30px;
+
+    &--video {
+      @include mix.title-700-30-26;
+      margin: 0 0 32px;
+    }
   }
 
   &--font-bigger {
@@ -70,9 +82,27 @@
       @include mix.title-700-30-26;
     }
   }
+
+  @media (min-width: $screen-desktop) {
+    &--photos {
+      margin: 0 0 32px;
+    }
+  }
 }
 
 .intro__message {
   @include mix.title-400-14-21;
   margin: 0;
+
+  &--video {
+    padding: 0 20px;
+  }
+}
+
+.intro__break {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: inline;
+  }
 }

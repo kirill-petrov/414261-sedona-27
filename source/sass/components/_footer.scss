@@ -8,9 +8,23 @@
   padding: 39px 0 23px;
   background-color: $color-white;
 
+  &--catalog {
+    padding: 29px 0 23px;
+  }
+
   @media (min-width: $screen-tablet) {
     flex-direction: row;
     padding: 36px 0;
+
+    &--catalog {
+      padding: 75px 0 35px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    &--catalog {
+      padding: 117px 0 35px;
+    }
   }
 }
 
@@ -47,9 +61,17 @@
     display: flex;
     justify-content: flex-end;
     padding-right: 76px;
+
+    &--catalog {
+      padding: 0 60px 0 0;
+    }
   }
 
   @media (min-width: $screen-desktop) {
     padding-right: 136px;
+
+    &--catalog {
+      padding: 0 120px 0 0;
+    }
   }
 }

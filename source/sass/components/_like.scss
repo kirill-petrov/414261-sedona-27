@@ -12,12 +12,16 @@
 }
 
 .like__icon {
-  margin: 0;
-  margin-right: 14px;
+  margin: 0 14px 0 0;
   padding: 0;
   color: #a4a4a4;
 
+  @media (min-width: $screen-tablet) {
+    margin: -10px 9px 0 0;
+  }
+
   @media (min-width: $screen-desktop) {
+    margin: -22px 9px 0 0;
     color: $color-white;
   }
 }
@@ -25,4 +29,12 @@
 .like__total-likes {
   @include mix.title-700-14-21;
   padding-top: 6px;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin: -18px 0 0 0;
+  }
 }
