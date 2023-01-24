@@ -5,11 +5,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsans.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsansbold.woff2" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180.png">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="stylesheet" href="./css/style.min.css">
   <script defer src="./js/index.js"></script>
 </head>
 
@@ -21,8 +23,8 @@
       </picture>
     </a>
 
-    <nav class="site-nav site-nav--opened site-nav--no-js">
-      <button class="site-nav__toggle-menu" type="button" aria-label="Кнопка отображения меню">
+    <nav class="site-nav site-nav--opened js-nojs">
+      <button class="site-nav__toggle-menu site-nav__toggle-menu--js-hide" type="button" aria-label="Кнопка отображения меню">
         <span class="visually-hidden">Меню</span>
       </button>
 
@@ -78,15 +80,15 @@
               Настоящий городок
             </h3>
             <p class="feature__number">– №1 –</p>
-            <p class="feature__description">
-              Седона не аттракцион для туристов, там течёт своя жизнь
+            <p class="feature__description feature__description--extended">
+              Седона не аттракцион для туристов,<br class="feature__break"> там течёт своя жизнь
             </p>
           </div>
 
           <picture class="feature__image">
             <source type="image/webp" media="(min-width: 513px)" srcset="./img/photo-city-800.webp 1x, ./img/photo-city-800-2x.webp 2x">
             <source type="image/webp" media="(min-width: 321px)" srcset="./img/photo-city-512.webp 1x, ./img/photo-city-512-2x.webp 2x">
-            <source type="image/webp"  srcset="./img/photo-city-320.webp 1x, ./img/photo-city-320-2x.webp 2x">
+            <source type="image/webp" srcset="./img/photo-city-320.webp 1x, ./img/photo-city-320-2x.webp 2x">
             <source media="(min-width: 513px)" srcset="./img/photo-city-800.jpg, ./img/photo-city-800-2x.jpg 2x">
             <source media="(min-width: 321px)" srcset="./img/photo-city-512.jpg, ./img/photo-city-512-2x.jpg 2x">
             <img src="./img/photo-city-320.jpg" width="320" height="260" srcset="./img/photo-city-320-2x.jpg 2x" alt="Вид города" />
@@ -109,7 +111,7 @@
               <svg width="40" height="40" aria-hidden="true">
                 <use href="./img/sprite.svg#services-eat" fill="currentColor" />
               </svg>
-              <p class="services__title services__title--eat">Еда</p>
+              <p class="services__title">Еда</p>
               <p class="services__description">
                 Всегда заказывайте фирменный бургер, вы&nbsp;не&nbsp;разочаруетесь!
               </p>
@@ -119,30 +121,31 @@
               <svg width="40" height="40" aria-hidden="true">
                 <use href="./img/sprite.svg#services-present" fill="currentColor" />
               </svg>
-              <p class="services__title services__title--souvenirs">Сувениры</p>
+              <p class="services__title">Сувениры</p>
               <p class="services__description">
-                Не только китайского, но&nbsp;и местного производства!
+                Не только китайского,<br class="services__break"> но&nbsp;и местного производства!
               </p>
             </li>
           </ul>
         </li>
 
         <!-- № 2 -->
+
         <li class="travel-details__item feature feature--extended">
           <div class="feature__wrapper feature__wrapper--bridge">
             <h3 class="feature__title">
               Там есть мост дьявола
             </h3>
             <p class="feature__number">– №2 –</p>
-            <p class="feature__description">
-              Да, по нему можно пройти! Если вы осмелитесь, конечно
+            <p class="feature__description feature__description--extended">
+              Да, по нему можно пройти!<br class="feature__break"> Если вы осмелитесь, конечно
             </p>
           </div>
 
           <picture class="feature__image">
             <source type="image/webp" media="(min-width: 513px)" srcset="./img/photo-bridge-800.webp 1x, ./img/photo-bridge-800-2x.webp 2x">
             <source type="image/webp" media="(min-width: 321px)" srcset="./img/photo-bridge-512.webp 1x, ./img/photo-bridge-512-2x.webp 2x">
-            <source type="image/webp"  srcset="./img/photo-bridge-320.webp 1x, ./img/photo-bridge-320-2x.webp 2x">
+            <source type="image/webp" srcset="./img/photo-bridge-320.webp 1x, ./img/photo-bridge-320-2x.webp 2x">
             <source media="(min-width: 512px)" srcset="./img/photo-bridge-800.jpg, ./img/photo-bridge-800-2x.jpg 2x">
             <source media="(min-width: 321px)" srcset="./img/photo-bridge-512.jpg, ./img/photo-bridge-512-2x.jpg 2x">
             <img src="./img/photo-bridge-320.jpg" width="320" height="260" srcset="./img/photo-bridge-320-2x.jpg 2x" alt="Мост Дьявола" />
@@ -150,22 +153,23 @@
         </li>
 
         <!-- № 3, 4, 5 -->
+
         <li class="travel-details__item feature">
           <div class="feature__wrapper">
             <h3 class="feature__title">Небольшая площадь</h3>
             <p class="feature__number">– №3 –</p>
             <p class="feature__description">
-              Все интересные места находятся очень близко
+              Все интересные места находятся очень<br class="feature__break"> близко
             </p>
           </div>
         </li>
 
         <li class="travel-details__item feature">
-          <div class="feature__wrapper">
+          <div class="feature__wrapper feature__wrapper--middle">
             <h3 class="feature__title">Красивая дорога</h3>
             <p class="feature__number">– №4 –</p>
             <p class="feature__description">
-              Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!
+              Ехать в Седону из Лас-Вегаса совсем<br class="feature__break"> не&nbsp;скучно!
             </p>
           </div>
         </li>
@@ -175,7 +179,7 @@
             <h3 class="feature__title">Мало туристов</h3>
             <p class="feature__number">– №5 –</p>
             <p class="feature__description">
-              Большинство едет в&nbsp;Гранд Каньон и&nbsp;толпится там
+              Большинство едет в&nbsp;Гранд Каньон и<br class="feature__break"> толпится там
             </p>
           </div>
         </li>
@@ -185,7 +189,8 @@
     <section class="call-to-action">
       <h2 class="call-to-action__title">Заинтересовались?</h2>
       <p class="call-to-action__message">
-        Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем вам
+        Укажите предполагаемые даты поездки,
+        <br class="call-to-action__break">и&nbsp;мы&nbsp;покажем вам
         лучшие предложения гостиниц в&nbsp;Седоне
       </p>
       <a class="call-to-action__button" aria-label="Найти гостиницу">
@@ -216,7 +221,7 @@
       <li>
         <a class="socials__link" href="#" aria-label="Перейти в Telegram">
           <span class="visually-hidden">Telegram</span>
-          <svg width="24" height="14" aria-hidden="true">
+          <svg width="21" height="18" aria-hidden="true">
             <use href="./img/sprite.svg#socials-tg" fill="currentColor" />
           </svg>
         </a>
@@ -225,7 +230,7 @@
       <li>
         <a class="socials__link" href="#" aria-label="Перейти в YouTube">
           <span class="visually-hidden">YouTube</span>
-          <svg width="24" height="14" aria-hidden="true">
+          <svg width="24" height="24" aria-hidden="true">
             <use href="./img/sprite.svg#socials-yt" fill="currentColor" />
           </svg>
         </a>

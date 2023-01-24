@@ -5,24 +5,24 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Седона</title>
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsans.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsansbold.woff2" crossorigin="anonymous">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180.png">
   <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="stylesheet" href="./css/style.min.css" />
+  <link rel="stylesheet" href="./css/style.min.css">
   <script defer src="./js/index.js"></script>
 </head>
 
 <body class="page__body">
   <header class="page-header">
-    <a>
-      <picture>
-        <img class="page-header__logo" src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
-      </picture>
+    <a class="page-header__logo" href="index.html">
+      <img src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
     </a>
 
-    <nav class="site-nav site-nav--opened site-nav--no-js">
-      <button class="site-nav__toggle-menu" type="button" aria-label="Кнопка отображения меню">
+    <nav class="site-nav site-nav--opened js-nojs">
+      <button class="site-nav__toggle-menu site-nav__toggle-menu--js-hide" type="button" aria-label="Кнопка отображения меню">
         <span class="visually-hidden">Меню</span>
       </button>
 
@@ -60,29 +60,32 @@
       <h1 class="visually-hidden">Форма для отзыва</h1>
 
       <section class="feedback__intro intro intro--feedback">
-        <h2 class="intro__title intro__title--font-bigger">Оставьте свой отзыв</h2>
-        <p class="intro__message">
-          Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них, а&nbsp;также о&nbsp;посещенных вами достопримечательностях
+        <h2 class="intro__title intro__title--feedback intro__title--font-bigger">Оставьте свой отзыв</h2>
+        <p class="intro__message intro__message--feedback">
+          Помогите нашим отелям стать лучше! оставьте отзыв о&nbsp;них,<br class="intro__break"> а&nbsp;также о посещенных вами достопримечательностях
         </p>
       </section>
 
       <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
+
+        <!-- PERSON -->
+
         <fieldset class="form__fieldset fieldset">
-          <h2 class="fieldset__title">Представьтесь</h2>
+          <h2 class="fieldset__title">Представьтесь:</h2>
 
           <label class="input-field">
             <span class="input-field__label">Имя<sup>*</sup>:</span>
-            <input class="input-field__input" type="text" name="guest-name" placeholder="Введите имя" required />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-name" placeholder="Введите имя" required value="Пётр" />
           </label>
 
           <label class="input-field">
             <span class="input-field__label">Фамилия<sup>*</sup>:</span>
-            <input class="input-field__input" type="text" name="guest-surname" placeholder="Введите фамилию" required />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-surname" placeholder="Введите фамилию" required />
           </label>
 
           <label class="input-field">
             <span class="input-field__label">Отчество:</span>
-            <input class="input-field__input" type="text" name="guest-patronymic" placeholder="Введите отчество" />
+            <input class="input-field__input input-field__input--person" type="text" name="guest-patronymic" placeholder="Введите отчество" />
           </label>
         </fieldset>
 
@@ -125,12 +128,12 @@
 
           <label class="fieldset__field-radio radio">
             <input class="radio__input" type="radio" name="point" value="good" checked />
-            <span>Скорее положительные</span>
+            <span>Скорее положительное</span>
           </label>
 
           <label class="fieldset__field-radio radio">
             <input class="radio__input" type="radio" name="point" value="bad" />
-            <span>Скорее отрицательные</span>
+            <span>Скорее отрицательное</span>
           </label>
 
           <label class="fieldset__field-radio radio">
@@ -141,19 +144,19 @@
 
         <!-- CHECKBOX -->
 
-        <fieldset class="form__fieldset fieldset">
+        <fieldset class="form__fieldset fieldset fieldset--checkbox">
           <h2 class="fieldset__title">Посещенные достопримечательности:</h2>
 
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="bridge" />
+            <input class="checkbox__input" type="checkbox" name="bridge" checked />
             <span>Мост Дьявола</span>
           </label>
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="bell" />
+            <input class="checkbox__input" type="checkbox" name="bell" checked />
             <span>Гора-Колокол</span>
           </label>
           <label class="checkbox">
-            <input class="checkbox__input" type="checkbox" name="slide-park" />
+            <input class="checkbox__input" type="checkbox" name="slide-park" checked />
             <span>Слайд-парк</span>
           </label>
           <label class="checkbox">
@@ -180,7 +183,7 @@
     </section>
   </main>
 
-  <footer class="page__footer footer">
+  <footer class="page__footer footer footer--feedback">
     <h2 class="visually-hidden">Социальный сети</h2>
 
     <p class="footer__hashtag">#visitsedona</p>
@@ -198,7 +201,7 @@
       <li>
         <a class="socials__link" href="#" aria-label="Перейти в Telegram">
           <span class="visually-hidden">Telegram</span>
-          <svg width="24" height="14" aria-hidden="true">
+          <svg width="21" height="18" aria-hidden="true">
             <use href="./img/sprite.svg#socials-tg" fill="currentColor" />
           </svg>
         </a>
@@ -207,14 +210,14 @@
       <li>
         <a class="socials__link" href="#" aria-label="Перейти в YouTube">
           <span class="visually-hidden">YouTube</span>
-          <svg width="24" height="14" aria-hidden="true">
+          <svg width="24" height="24" aria-hidden="true">
             <use href="./img/sprite.svg#socials-yt" fill="currentColor" />
           </svg>
         </a>
       </li>
     </ul>
 
-    <div class="footer__created">
+    <div class="footer__created footer__created--feedback">
       <a class="created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMl Academy">
         <span class="created__text">Разработано</span>
 
@@ -228,27 +231,42 @@
   </footer>
 
   <div class="modal-container">
-    <div class="modal modal--error modal-hidden">
-      <h2 class="modal__title">Что-то пошлоне так!</h2>
-      <p class="modal__message">
-        Проверьте поля, выделенные красным, скорее всего вы забыли их
-        заполнить
-      </p>
-      <button class="modal__close-button button button--primary" type="button">
-        OK
-      </button>
+    <div class="modal modal--failure">
+
+      <div class="modal__wrapper-info modal__wrapper-info--failure">
+        <h2 class="modal__title modal__title--failure">Что-то пошло не&nbsp;так!</h2>
+        <p class="modal__message modal__message--failure">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </p>
+      </div>
+
+      <div class="modal__wrapper-btn">
+        <button class="modal__close-button modal__close-button--failure" type="button">
+          OK
+        </button>
+      </div>
+
     </div>
 
-    <div class="modal modal--success modal-hidden">
-      <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-      <p class="modal__message">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
-        время мы опубликуем его на сайте.
-      </p>
-      <button class="modal__close-button button button--primary" type="button">
-        Закрыть окно
-      </button>
+    <div class="modal modal--success">
+
+      <div class="modal__wrapper-info modal__wrapper-info--success">
+        <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+        <p class="modal__message modal__message--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее
+          время мы опубликуем его на сайте.
+        </p>
+      </div>
+
+      <div class="modal__wrapper-btn modal__wrapper-btn--success">
+        <button class="modal__close-button modal__close-button--success" type="button">
+          Закрыть окно
+        </button>
+      </div>
+
     </div>
+
   </div>
 </body>
 

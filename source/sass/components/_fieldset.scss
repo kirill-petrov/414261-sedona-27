@@ -15,14 +15,22 @@
     padding: 24px 0 34px;
   }
 
-  &:nth-child(n + 3) {
-    padding: 24px 0 24px;
+  &:nth-child(3) {
+    padding: 27px 0 24px;
+  }
+
+  &:nth-child(4) {
+    padding: 27px 0 23px;
+  }
+
+  &:nth-child(5) {
+    padding: 24px 0 0;
   }
 
   @media (min-width: $screen-tablet) {
     &:nth-child(1) {
-      margin-bottom: 93px;
-      padding: 54px 43px 0 0;
+      margin: 0 0 61px;
+      padding: 54px 43px 14px 0;
       border-right: 1px solid $post-border;
     }
 
@@ -34,22 +42,13 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       padding: 40px 28px 74px;
-
-      @media (min-width: $screen-desktop) {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 58px 0 100px;
-      }
     }
 
     &:nth-child(4) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      padding: 84px 68px;
-
-      @media (min-width: $screen-desktop) {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 86px 44px 100px;
-      }
+      column-gap: 30px;
+      padding: 55px 84px 38px;
     }
 
     &:last-child {
@@ -73,6 +72,29 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, 0);
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    &:nth-child(1) {
+      margin: 0 0 69px;
+      padding: 54px 62px 14px 0;
+    }
+
+    &:nth-child(2) {
+      padding: 54px 0 0 65px;
+    }
+
+    &:nth-child(3) {
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: 50px;
+      padding: 58px 46px 98px;
+    }
+
+    &:nth-child(4) {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 0;
+      padding: 85px 14px 84px;
     }
   }
 
@@ -119,7 +141,7 @@
   outline: none;
   overflow: hidden;
   text-overflow: ellipsis;
-  resize: vertical;
+  resize: unset;
 
   &::placeholder {
     color: $color-text-placholder;
@@ -136,10 +158,21 @@
   }
 
   @media (min-width: $screen-tablet) {
+    height: 160px;
     margin-bottom: 48px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 768px;
+    margin: 0 auto 48px;
   }
 }
 
 .fieldset__submit-group {
   margin: 0 auto;
+
+  @media (min-width: $screen-desktop) {
+    width: 768px;
+    margin: 0 auto;
+  }
 }

@@ -4,57 +4,58 @@
 .intro {
   display: grid;
   justify-items: center;
-  padding: 32px 18px 16px;
+  padding: 34px 18px 16px;
   text-align: center;
   text-transform: uppercase;
   background-color: $color-white;
 
+  &--feedback {
+    padding: 36px 0 28px;
+  }
+
   @media (min-width: $screen-tablet) {
     width: 520px;
-    padding: 48px 0 56px;
+    padding: 48px 0 55px;
+
+    &--feedback {
+      padding: 64px 0 102px;
+    }
   }
 
   @media (min-width: $screen-desktop) {
     padding: 59px 0 45px;
+
+    &--feedback {
+      padding: 113px 0 66px;
+    }
   }
 
   &--photos {
-    padding: 37px 0 25px;
+    padding: 37px 0 38px;
 
     @media (min-width: $screen-tablet) {
       width: 460px;
-      padding: 67px 0 87px;
+      padding: 67px 0 82px;
     }
 
     @media (min-width: $screen-desktop) {
-      padding: 105px 0 89px;
+      padding: 98px 0 89px;
     }
   }
 
   &--video {
-    padding: 17px 0 38px;
+    padding: 16px 0 39px;
 
     @media (min-width: $screen-tablet) {
-      max-width: 445px;
-      padding: 63px 0 90px;
+      padding: 56px 0 90px;
     }
 
     @media (min-width: $screen-desktop) {
       padding: 62px 0 88px;
     }
-  }
-
-  &--feedback {
-    // todo: pixel-perfect
-    padding: 36px 0 28px;
 
     @media (min-width: $screen-tablet) {
-      // max-width: 445px;
       padding: 64px 0 102px;
-    }
-
-    @media (min-width: $screen-desktop) {
-      // padding: 62px 0 88px;
     }
   }
 }
@@ -65,9 +66,31 @@
   margin: 0 0 35px;
   color: $color-black;
 
+  &--photos {
+    margin: 0 0 25px;
+  }
+
+  &--video {
+    margin: 0 0 28px;
+  }
+
+  &--feedback {
+    margin: 0 0 24px;
+  }
+
   @media (min-width: $screen-tablet) {
     @include mix.title-700-21-26;
     width: 100%;
+    margin: 0 0 30px;
+
+    &--video {
+      @include mix.title-700-30-26;
+      margin: 0 0 32px;
+    }
+
+    &--feedback {
+      margin: 0 0 21px;
+    }
   }
 
   &--font-bigger {
@@ -75,9 +98,37 @@
       @include mix.title-700-30-26;
     }
   }
+
+  @media (min-width: $screen-desktop) {
+    &--photos {
+      margin: 0 0 32px;
+    }
+
+    &--feedback {
+      margin: 0 0 30px;
+    }
+  }
 }
 
 .intro__message {
   @include mix.title-400-14-21;
   margin: 0;
+
+  &--video {
+    padding: 0 20px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--feedback {
+      @include mix.title-400-14-24;
+    }
+  }
+}
+
+.intro__break {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: inline;
+  }
 }

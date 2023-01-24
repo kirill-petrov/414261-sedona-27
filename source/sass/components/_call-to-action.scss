@@ -10,16 +10,17 @@
   background-color: $color-white;
 
   @media (min-width: $screen-tablet) {
-    padding: 61px 18px 66px;
+    padding: 61px 18px 58px;
   }
 }
 
 .call-to-action__title {
   @include mix.title-700-21-26;
-  margin: 0 0 31px 0;
+  margin: 0 0 23px 0;
 
   @media (min-width: $screen-tablet) {
     @include mix.title-700-30-26;
+    margin: 0 0 32px;
   }
 }
 
@@ -27,10 +28,30 @@
   max-width: 458px;
   text-align: center;
   margin: 0 0 31px 0;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 0 41px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin: 0 0 45px;
+  }
+}
+
+.call-to-action__break {
+  display: none;
+
+  @media (min-width: $screen-tablet) {
+    display: inline;
+  }
 }
 
 .call-to-action__button {
   @include mix.title-700-21-26;
   @include mix.button;
   max-width: 458px;
+
+  @media (min-width: $screen-desktop) {
+    margin: 0 0 8px;
+  }
 }

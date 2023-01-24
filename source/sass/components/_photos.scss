@@ -100,7 +100,7 @@
 }
 
 .photos__info {
-  padding: 15px 0 25px;
+  padding: 15px 0 30px;
 
   @media (min-width: $screen-tablet) {
     display: grid;
@@ -120,14 +120,14 @@
     left: 0;
     z-index: 1;
     width: 100%;
-    padding: 17px 20px;
+    padding: 21px 20px 0;
     background: none;
   }
 }
 
 .photos__title {
   @include mix.title-700-14-21;
-  margin: 0 0 6px;
+  margin: 0 0 1px;
   text-transform: uppercase;
 
   @media (min-width: $screen-tablet) {
@@ -135,13 +135,15 @@
   }
 
   @media (min-width: $screen-desktop) {
+    margin: 0;
+
     color: $color-white;
   }
 }
 
 .photos__author {
   @include mix.title-400-14-21;
-  margin: 0 0 11px;
+  margin: 0 0 12px;
 
   @media (min-width: $screen-tablet) {
     grid-area: author;
@@ -149,6 +151,7 @@
   }
 
   @media (min-width: $screen-desktop) {
+    margin: -8px 0 0 0;
     color: $color-white;
   }
 }

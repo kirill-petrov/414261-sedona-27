@@ -13,6 +13,7 @@
 
   @media (min-width: $screen-desktop) {
     padding: 0 120px;
+    grid-template-columns: auto 1fr;
   }
 }
 
