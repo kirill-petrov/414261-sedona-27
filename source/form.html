@@ -75,7 +75,7 @@
 
           <label class="input-field">
             <span class="input-field__label">Имя<sup>*</sup>:</span>
-            <input class="input-field__input input-field__input--person" type="text" name="guest-name" placeholder="Введите имя" required value="Пётр"/>
+            <input class="input-field__input input-field__input--person" type="text" name="guest-name" placeholder="Введите имя" required value="Пётр" />
           </label>
 
           <label class="input-field">
@@ -231,27 +231,42 @@
   </footer>
 
   <div class="modal-container">
-    <div class="modal modal--error modal-hidden">
-      <h2 class="modal__title">Что-то пошлоне так!</h2>
-      <p class="modal__message">
-        Проверьте поля, выделенные красным, скорее всего вы забыли их
-        заполнить
-      </p>
-      <button class="modal__close-button button button--primary" type="button">
-        OK
-      </button>
+    <div class="modal modal--failure">
+
+      <div class="modal__wrapper-info modal__wrapper-info--failure">
+        <h2 class="modal__title modal__title--failure">Что-то пошло не&nbsp;так!</h2>
+        <p class="modal__message modal__message--failure">
+          Проверьте поля, выделенные красным, скорее всего вы забыли их
+          заполнить
+        </p>
+      </div>
+
+      <div class="modal__wrapper-btn">
+        <button class="modal__close-button modal__close-button--failure" type="button">
+          OK
+        </button>
+      </div>
+
     </div>
 
-    <div class="modal modal--success modal-hidden">
-      <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-      <p class="modal__message">
-        Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее
-        время мы опубликуем его на сайте.
-      </p>
-      <button class="modal__close-button button button--primary" type="button">
-        Закрыть окно
-      </button>
+    <div class="modal modal--success">
+
+      <div class="modal__wrapper-info modal__wrapper-info--success">
+        <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+        <p class="modal__message modal__message--success">
+          Спасибо за ваше участие, ваш отзыв уже поступил к&nbsp;нам. В&nbsp;ближайшее
+          время мы опубликуем его на сайте.
+        </p>
+      </div>
+
+      <div class="modal__wrapper-btn modal__wrapper-btn--success">
+        <button class="modal__close-button modal__close-button--success" type="button">
+          Закрыть окно
+        </button>
+      </div>
+
     </div>
+
   </div>
 </body>
 

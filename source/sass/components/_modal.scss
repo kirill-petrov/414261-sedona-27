@@ -1,0 +1,158 @@
+@use "../abstracts/vars" as *;
+@use "../abstracts/mixins" as mix;
+
+.modal-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  @include mix.title-400-14-21;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $color-text-basic;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #fff;
+
+  &--failure {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 320px;
+    min-height: 280px;
+    transform: translate(-50%, 0);
+  }
+
+  &--success {
+    position: absolute;
+    top: 367px;
+    left: 50%;
+    width: 320px;
+    min-height: 323px;
+    transform: translate(-50%, 0);
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--failure {
+      width: 400px;
+      min-height: 347px;
+    }
+
+    &--success {
+      width: 640px;
+      min-height: 347px;
+    }
+  }
+}
+
+.modal__wrapper-info {
+  width: 100%;
+
+  &--failure {
+    padding: 45px 0 28px;
+  }
+
+  &--success {
+    padding: 36px 0 55px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--failure {
+      padding: 38px 0 60px;
+    }
+
+    &--success {
+      padding: 52px 0 55px;
+    }
+  }
+}
+
+.modal__title {
+  @include mix.title-700-18-26;
+
+  margin: 0 auto 30px;
+  color: $color-black;
+
+  @media (min-width: $screen-tablet) {
+    &--failure {
+      width: 300px;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    &--success {
+      @include mix.title-700-30-26;
+    }
+  }
+}
+
+.modal__message {
+  @include mix.title-400-14-21;
+
+  &--failure {
+    width: 220px;
+    margin: 0 auto;
+  }
+
+  &--success {
+    width: 240px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--failure {
+      width: 300px;
+    }
+
+    &--success {
+      width: 420px;
+    }
+  }
+}
+
+.modal__wrapper-btn {
+  width: 100%;
+
+  &--success {
+    padding: 20px 0 20px;
+    background-color: $color-bg-grey;
+  }
+
+  @media (min-width: $screen-tablet) {
+    &--success {
+      padding: 44px 0 44px;
+    }
+  }
+}
+
+.modal__close-button {
+  @include mix.button;
+  @include mix.title-700-18-26;
+  margin: 0 auto;
+
+  &--failure {
+    width: 180px;
+  }
+
+  &--success {
+    width: 280px;
+  }
+
+  @media (min-width: $screen-tablet) {
+    @include mix.title-700-21-26;
+
+    &--failure {
+      width: 272px;
+    }
+
+    &--success {
+      width: 458px;
+    }
+  }
+}
