@@ -22,6 +22,10 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  &--js-hide {
+    display: none;
+  }
 }
 
 .site-nav--closed .site-nav__toggle-menu {
@@ -127,16 +131,6 @@
   color: $color-white;
   background-color: $color-primary;
 
-  @media not screen and (min-width: $screen-tablet) {
-    &:not(:first-child) {
-      border-top: 1px solid #9ac2db;
-    }
-
-    &:not(:last-child) {
-      border-bottom: 1px solid #678fa8;
-    }
-  }
-
   &:hover {
     background-color: $color-primary-hover;
     transition: 0.2s ease-out 0s;
@@ -145,6 +139,21 @@
   &:active {
     color: #87b6d1;
     background-color: $color-primary-active;
+  }
+
+  &--current-page {
+    background-color: $color-primary-hover;
+    pointer-events: none;
+  }
+
+  @media not screen and (min-width: $screen-tablet) {
+    &:not(:first-child) {
+      border-top: 1px solid #9ac2db;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #678fa8;
+    }
   }
 
   @media (min-width: $screen-tablet) {
