@@ -129,14 +129,21 @@
   @include mix.title-700-14-21;
   margin: 0 0 1px;
   text-transform: uppercase;
+  max-width: 280px;
+  padding-right: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   @media (min-width: $screen-tablet) {
     grid-area: title;
+    max-width: unset;
+    width: 90%;
+    padding: 0;
   }
 
   @media (min-width: $screen-desktop) {
     margin: 0;
-
     color: $color-white;
   }
 }
@@ -144,10 +151,18 @@
 .photos__author {
   @include mix.title-400-14-21;
   margin: 0 0 12px;
+  max-width: 280px;
+  padding-right: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 
   @media (min-width: $screen-tablet) {
     grid-area: author;
+    max-width: unset;
+    width: 90%;
     margin: 0;
+    padding: 0;
   }
 
   @media (min-width: $screen-desktop) {
