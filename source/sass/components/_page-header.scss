@@ -11,8 +11,11 @@
   position: absolute;
   top: 0;
   left: 50%;
-  z-index: 2;
   width: 185px;
   height: 96px;
   transform: translate(-50%, 0);
+
+  @media (min-width: $screen-tablet) {
+    z-index: 2;
+  }
 }
