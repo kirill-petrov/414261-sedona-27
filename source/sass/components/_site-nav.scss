@@ -2,6 +2,8 @@
 @use "../abstracts/mixins" as mix;
 
 .site-nav {
+  order: 1;
+
   position: relative;
 
   @include mix.title-700-18-26;

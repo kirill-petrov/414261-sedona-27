@@ -11,7 +11,6 @@ const hideMenu = () => {
   siteNav.classList.add("site-nav--closed");
 };
 
-siteNav.classList.remove("js-nojs");
 toggleMenu.classList.remove("site-nav__toggle-menu--js-hide");
 
 hideMenu();

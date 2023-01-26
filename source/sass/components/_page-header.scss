@@ -1,21 +1,32 @@
 @use "../abstracts/vars" as *;
 
 .page-header {
-  position: relative;
-  z-index: 1;
-  height: 56px;
+  display: flex;
+  flex-direction: column;
   background-color: $color-white;
 }
 
 .page-header__logo {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 185px;
-  height: 96px;
-  transform: translate(-50%, 0);
+  order: 2;
+
+  position: relative;
+  height: 56px;
+
+  & img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 185px;
+    height: 96px;
+    transform: translate(-50%, 0);
+    z-index: 1;
+  }
 
   @media (min-width: $screen-tablet) {
-    z-index: 2;
+    height: unset;
+
+    & img {
+      top: -56px;
+    }
   }
 }
