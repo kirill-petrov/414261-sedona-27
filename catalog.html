@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Седона</title>
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsans.woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" type="font/woff2" href="./fonts/ptsansbold.woff2" crossorigin="anonymous">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="./img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-icon-180.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./css/style.min.css">
+  <script defer src="./js/index.js"></script>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      <img src="./img/logo.svg" width="185" height="96" alt="Лого седоны" />
+    </a>
+
+    <nav class="site-nav site-nav--opened">
+      <!-- Initially without javascript >> .site-nav__toggle-menu--js-hide { display: none; } -->
+      <button class="site-nav__toggle-menu site-nav__toggle-menu--js-hide" type="button" aria-label="Кнопка отображения меню">
+        <span class="visually-hidden">Меню</span>
+      </button>
+
+      <ul class="site-nav__list">
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="index.html">
+            <span>Главная</span>
+          </a>
+        </li>
+        <li class="site-nav__item site-nav__item--current-page">
+          <a class="site-nav__link">
+            <span>Фото и видео</span>
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="form.html">
+            <span>Форма отзыва</span>
+          </a>
+        </li>
+        <li class="site-nav__item">
+          <a class="site-nav__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span>HTMl Academy</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page__main">
+
+    <div class="hero">
+      <img class="hero__title" src="./img/hero-title.svg" width="229" height="39" alt="Надпись — Седона" />
+    </div>
+
+    <section class="gallery">
+      <h1 class="visually-hidden">Галерея с фото и видео</h1>
+
+      <section class="gallery__intro intro intro--photos">
+        <h2 class="intro__title intro__title--photos intro__title--font-bigger">Фото и видео</h2>
+
+        <p class="intro__message">
+          Не&nbsp;можете решиться на&nbsp;путешествие из-за курса? Фотографии&nbsp;помогут
+          вам забыть о&nbsp;политике и&nbsp;экономике.
+        </p>
+      </section>
+
+      <section class="gallery__photos">
+        <h3 class="visually-hidden">Фотографии</h3>
+
+        <ul class="photos">
+          <li class="photos__item">
+            <a href="#" aria-label="Открыть полноразмерное изображение">
+              <picture>
+                <source media="(min-width: 769px)" srcset="./img/photo-1-1200.jpg, ./img/photo-1-1200-2x.jpg 2x">
+                <source media="(min-width: 321px)" srcset="./img/photo-1-648.jpg, ./img/photo-1-648-2x.jpg 2x">
+                <img class="photos__image photos__image--main" src="./img/photo-1-280.jpg" width="280" height="280" srcset="./img/photo-1-280-2x.jpg 2x" alt="Неродные просторы" />
+              </picture>
+            </a>
+
+            <div class="photos__info">
+              <h2 class="photos__title" title="Неродные просторы">Неродные просторы</h2>
+              <p class="photos__author" title="Автор фото: Борис">Автор фото: Борис</p>
+              <button class="photos__like like" type="button" aria-label="Кнопка лайк">
+                <svg class="like__icon" width="23" height="21" aria-hidden="true">
+                  <use href="./img/sprite.svg#like" fill="currentColor" />
+                </svg>
+                <span class="like__total-likes">1350</span>
+              </button>
+            </div>
+          </li>
+
+          <li class="photos__item">
+            <a href="#" aria-label="Открыть полноразмерное изображение">
+              <img class="photos__image" src="./img/photo-2-400.jpg" width="280" height="280" srcset="./img/photo-2-400-2x.jpg 2x" alt="Местная растительность" />
+            </a>
+
+            <div class="photos__info">
+              <h2 class="photos__title" title="Местная растительность">Местная растительность</h2>
+              <p class="photos__author" title="Автор фото: Сергей">Автор фото: Сергей</p>
+              <button class="photos__like like" type="button" aria-label="Кнопка лайк">
+                <svg class="like__icon" width="23" height="21" aria-hidden="true">
+                  <use href="./img/sprite.svg#like" fill="currentColor" />
+                </svg>
+                <span class="like__total-likes">143</span>
+              </button>
+            </div>
+          </li>
+
+          <li class="photos__item">
+            <a href="#" aria-label="Открыть полноразмерное изображение">
+              <img class="photos__image" src="./img/photo-3-400.jpg" width="280" height="280" srcset="./img/photo-3-400-2x.jpg 2x" alt="Дорога на север" />
+            </a>
+
+            <div class="photos__info">
+              <h2 class="photos__title" title="Дорога на север">Дорога на север</h2>
+              <p class="photos__author" title="Автор фото: Пётр">Автор фото: Пётр</p>
+              <button class="photos__like like" type="button" aria-label="Кнопка лайк">
+                <svg class="like__icon" width="23" height="21" aria-hidden="true">
+                  <use href="./img/sprite.svg#like" fill="currentColor" />
+                </svg>
+                <span class="like__total-likes">96</span>
+              </button>
+            </div>
+          </li>
+
+          <li class="photos__item">
+            <a href="" aria-label="Открыть полноразмерное изображение">
+              <img class="photos__image" src="./img/photo-4-400.jpg" width="280" height="280" srcset="./img/photo-4-400-2x.jpg 2x" alt="Мост дьявола" />
+            </a>
+
+            <div class="photos__info">
+              <h2 class="photos__title" title="Мост Дьявола">Мост Дьявола</h2>
+              <p class="photos__author" title="Автор фото: Антон">Автор фото: Антон</p>
+              <button class="photos__like like" type="button" aria-label="Кнопка лайк">
+                <svg class="like__icon" width="23" height="21" aria-hidden="true">
+                  <use href="./img/sprite.svg#like" fill="currentColor" />
+                </svg>
+                <span class="like__total-likes">154</span>
+              </button>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="gallery__video video">
+        <h3 class="visually-hidden">Видео</h3>
+
+        <section class="intro intro--video">
+          <h2 class="intro__title intro__title--video">Все еще сомневаетесь?</h2>
+          <p class="intro__message intro__message--video">
+            Смотрите видеопрезентацию и скорее за&nbsp;билетами, пока они<br class="intro__break"> не подорожали в&nbsp;очередной раз!
+          </p>
+        </section>
+
+        <div class="video__player-wrapper">
+          <div class="player">
+            <button class="player__button" type="button" aria-label="Кнопка воспроизведения">
+              <span class="visually-hidden">Воспроизвести</span>
+            </button>
+
+            <div class="player__container">
+              <video poster="./img/video-poster.jpg">
+                Your browser doesn't support HTML5 video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer class="page__footer footer footer--catalog">
+    <h2 class="visually-hidden">Социальный сети</h2>
+
+    <p class="footer__hashtag">#visitsedona</p>
+
+    <ul class="footer__socials socials">
+      <li>
+        <a class="socials__link" href="#" aria-label="Перейти в VK">
+          <span class="visually-hidden">ВКонтакте</span>
+          <svg width="24" height="14" aria-hidden="true">
+            <use href="./img/sprite.svg#socials-vk" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a class="socials__link" href="#" aria-label="Перейти в Telegram">
+          <span class="visually-hidden">Telegram</span>
+          <svg width="21" height="18" aria-hidden="true">
+            <use href="./img/sprite.svg#socials-tg" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+
+      <li>
+        <a class="socials__link" href="#" aria-label="Перейти в YouTube">
+          <span class="visually-hidden">YouTube</span>
+          <svg width="24" height="24" aria-hidden="true">
+            <use href="./img/sprite.svg#socials-yt" fill="currentColor" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+
+    <div class="footer__created footer__created--catalog">
+      <a class="created" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Сайт HTMl Academy">
+        <span class="created__text">Разработано</span>
+
+        <svg width="27" height="35" aria-hidden="true">
+          <use href="./img/sprite.svg#logo-ha" fill="currentColor" />
+        </svg>
+        <span class="visually-hidden">Перейти на страницу курса Адаптивная вёрстка и автоматизация</span>
+      </a>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>
